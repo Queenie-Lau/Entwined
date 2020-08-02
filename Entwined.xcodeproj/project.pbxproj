@@ -10,6 +10,7 @@
 		41245DD424D65F4A00497C9C /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41245DD324D65F4A00497C9C /* Questions.swift */; };
 		41245DD624D65F5F00497C9C /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41245DD524D65F5F00497C9C /* Chat.storyboard */; };
 		41245DD824D66C7200497C9C /* tester-again.json in Resources */ = {isa = PBXBuildFile; fileRef = 41245DD724D66C7200497C9C /* tester-again.json */; };
+		4135AA4024D69BC800D2F8A2 /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4135AA3F24D69BC800D2F8A2 /* AR.storyboard */; };
 		41404FD624D24F2D00D870CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FD524D24F2D00D870CA /* AppDelegate.swift */; };
 		41404FD824D24F2D00D870CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FD724D24F2D00D870CA /* SceneDelegate.swift */; };
 		41404FDA24D24F2D00D870CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FD924D24F2D00D870CA /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		41245DD324D65F4A00497C9C /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		41245DD524D65F5F00497C9C /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		41245DD724D66C7200497C9C /* tester-again.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "tester-again.json"; path = "../../../Downloads/tester-again.json"; sourceTree = "<group>"; };
+		4135AA3F24D69BC800D2F8A2 /* AR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
 		41404FD224D24F2D00D870CA /* Entwined.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Entwined.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41404FD524D24F2D00D870CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41404FD724D24F2D00D870CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				41245DD524D65F5F00497C9C /* Chat.storyboard */,
+				4135AA3F24D69BC800D2F8A2 /* AR.storyboard */,
 				41404FD524D24F2D00D870CA /* AppDelegate.swift */,
 				41404FD724D24F2D00D870CA /* SceneDelegate.swift */,
 				41245DD324D65F4A00497C9C /* Questions.swift */,
@@ -318,6 +321,7 @@
 				41245DD624D65F5F00497C9C /* Chat.storyboard in Resources */,
 				4140502E24D64AA800D870CA /* logo.json in Resources */,
 				41B84E7B24D68B6000272D95 /* chat-bg.png in Resources */,
+				4135AA4024D69BC800D2F8A2 /* AR.storyboard in Resources */,
 				4140502624D63F2500D870CA /* work-please.json in Resources */,
 				41B84E7924D689E800272D95 /* Earth Bot.png in Resources */,
 				4140502824D641D300D870CA /* second-try.json in Resources */,

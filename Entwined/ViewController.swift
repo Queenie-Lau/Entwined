@@ -5,7 +5,7 @@
 //  Created by Queenie Lau on 7/29/20.
 //  Copyright © 2020 Queenie Lau. All rights reserved.
 //
-
+import ARKit
 import UIKit
 import Lottie
 import Hero
@@ -17,6 +17,34 @@ class ViewController: UIViewController {
     @IBOutlet weak var responseLabel: UILabel!
     @IBOutlet weak var askButton: UIButton!
     @IBOutlet weak var questionField: UITextField!
+    
+    
+    
+    
+    // Add Cube in AR
+    @IBAction func addCube(_ sender: Any) {
+        let node = SCNNode()
+        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
+        node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+        node.geometry?.firstMaterial?.specular.contents = UIColor.white
+        self.sceneView.autoenablesDefaultLighting = true
+        let x = randomNumbers(firstNum: 0.3, secondNum: -0.3)
+        let y = randomNumbers(firstNum: 0.3, secondNum: -0.3)
+        let z = randomNumbers(firstNum: 0.3, secondNum: -0.3)
+        node.position = SCNVector3(x,y,z)
+        self.sceneView.scene.rootNode.addChildNode(node)
+    }
+    
+    func randomNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat {
+         return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
+        
+    }
+    // Add AR Scene View
+    @IBOutlet weak var sceneView: ARSCNView!
+    let configuration = ARWorldTrackingConfiguration()
+    
+    
+    
     let answerToQuestion = QuestionsAndAnswers()
     
     override func viewDidLoad() {
@@ -28,6 +56,15 @@ class ViewController: UIViewController {
         }
         if(questionField != nil){
             questionField.becomeFirstResponder()
+        }
+        // Look at feature points
+        if(self.sceneView != nil){
+            self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+             // Start AR view
+             self.sceneView.session.run(configuration)
+            // Below is testingif the AR breaks
+//            print(ARSCNDebugOptions.showWorldOrigin)
+//            self.sceneView.session.run(configuration)
         }
     }
     
