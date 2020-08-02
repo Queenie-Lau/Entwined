@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qtv-cI-HgW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChatVC-->
+        <scene sceneID="5pj-tg-fRw">
+            <objects>
+                <viewController id="Qtv-cI-HgW" userLabel="ChatVC" customClass="ViewController" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5uU-fB-oEj"/>
+                        <viewControllerLayoutGuide type="bottom" id="TAZ-HG-NFl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a1h-ZY-IFP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="107" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFR-yx-eM0">
+                                <rect key="frame" x="60" y="214" width="274" height="309"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hello Human, I'm Flora. Ask me anything about sustainability." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3G-SE-1tD">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your question..." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z3R-Em-dYp">
+                                        <rect key="frame" x="0.0" y="122" width="274" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="editingChanged:" destination="Qtv-cI-HgW" eventType="editingChanged" id="Dxw-Ny-x95"/>
+                                            <outlet property="delegate" destination="Qtv-cI-HgW" id="yBZ-lx-Hkm"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbz-iP-4gR">
+                                        <rect key="frame" x="0.0" y="181" width="274" height="128"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Ask">
+                                                    <attributes>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <state key="disabled" backgroundImage="disabled"/>
+                                        <connections>
+                                            <action selector="askButtonTapped:" destination="Qtv-cI-HgW" eventType="touchUpInside" id="GzD-sg-gkp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="746" fixedFrame="YES" text="🤖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1x-yz-iJ7">
+                                <rect key="frame" x="113" y="104" width="61" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <viewLayoutGuide key="safeArea" id="Xap-C1-tYe"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61426365380000003" green="0.78373152020000003" blue="0.44695419069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UFR-yx-eM0" secondAttribute="trailing" constant="80" id="Brw-Ha-xmY"/>
+                            <constraint firstItem="TAZ-HG-NFl" firstAttribute="top" secondItem="UFR-yx-eM0" secondAttribute="bottom" constant="339" id="C5F-xj-rNI"/>
+                            <constraint firstItem="UFR-yx-eM0" firstAttribute="leading" secondItem="KUT-vD-iJN" secondAttribute="leading" constant="60" id="dcn-Sy-ZfU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KUT-vD-iJN"/>
+                    </view>
+                    <connections>
+                        <outlet property="askButton" destination="zbz-iP-4gR" id="66B-eT-Fuk"/>
+                        <outlet property="questionField" destination="z3R-Em-dYp" id="IxX-NT-TPw"/>
+                        <outlet property="responseLabel" destination="w3G-SE-1tD" id="Xsp-Sy-UDS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2z-yv-ATG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27.536231884057973" y="167.41071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="disabled" width="128" height="128"/>
+    </resources>
+</document>
