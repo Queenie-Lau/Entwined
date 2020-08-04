@@ -11,6 +11,13 @@
 		4114CC1324D9FBCF005C3D30 /* play-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC1224D9FBCF005C3D30 /* play-button@2x.png */; };
 		4114CC1524D9FDD6005C3D30 /* forehead-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC1424D9FDD6005C3D30 /* forehead-1.png */; };
 		4114CC1724D9FF44005C3D30 /* tester-again.json in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC1624D9FF44005C3D30 /* tester-again.json */; };
+		4114CC1A24DA01E7005C3D30 /* forehead-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC1824DA01E6005C3D30 /* forehead-2.png */; };
+		4114CC1B24DA01E7005C3D30 /* forehead-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC1924DA01E7005C3D30 /* forehead-3.png */; };
+		4114CC1D24DA042B005C3D30 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC1C24DA042A005C3D30 /* clock.png */; };
+		4114CC2124DA06DD005C3D30 /* level-two.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC1E24DA06DD005C3D30 /* level-two.png */; };
+		4114CC2224DA06DD005C3D30 /* level-one.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC1F24DA06DD005C3D30 /* level-one.png */; };
+		4114CC2324DA06DD005C3D30 /* level-three.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC2024DA06DD005C3D30 /* level-three.png */; };
+		4114CC2524DA08E4005C3D30 /* start-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC2424DA08E4005C3D30 /* start-button.png */; };
 		41245DCE24D65B3300497C9C /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41245DCD24D65B3300497C9C /* Questions.swift */; };
 		41245DD224D65B9A00497C9C /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41245DD124D65B9900497C9C /* Chat.storyboard */; };
 		41404FD624D24F2D00D870CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FD524D24F2D00D870CA /* AppDelegate.swift */; };
@@ -50,6 +57,13 @@
 		4114CC1224D9FBCF005C3D30 /* play-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button@2x.png"; sourceTree = "<group>"; };
 		4114CC1424D9FDD6005C3D30 /* forehead-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forehead-1.png"; sourceTree = "<group>"; };
 		4114CC1624D9FF44005C3D30 /* tester-again.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tester-again.json"; sourceTree = "<group>"; };
+		4114CC1824DA01E6005C3D30 /* forehead-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forehead-2.png"; sourceTree = "<group>"; };
+		4114CC1924DA01E7005C3D30 /* forehead-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forehead-3.png"; sourceTree = "<group>"; };
+		4114CC1C24DA042A005C3D30 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		4114CC1E24DA06DD005C3D30 /* level-two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-two.png"; sourceTree = "<group>"; };
+		4114CC1F24DA06DD005C3D30 /* level-one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-one.png"; sourceTree = "<group>"; };
+		4114CC2024DA06DD005C3D30 /* level-three.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-three.png"; sourceTree = "<group>"; };
+		4114CC2424DA08E4005C3D30 /* start-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-button.png"; sourceTree = "<group>"; };
 		41245DCD24D65B3300497C9C /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Questions.swift; path = "Chat-Bot/Questions.swift"; sourceTree = SOURCE_ROOT; };
 		41245DD124D65B9900497C9C /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Chat.storyboard; path = "../../../Entwined/Chat-Bot/Chat.storyboard"; sourceTree = "<group>"; };
 		41404FD224D24F2D00D870CA /* Entwined.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Entwined.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,7 +145,14 @@
 				4114CC0E24D9FA78005C3D30 /* charades-welcome-bg.png */,
 				4114CC1224D9FBCF005C3D30 /* play-button@2x.png */,
 				4114CC1624D9FF44005C3D30 /* tester-again.json */,
+				4114CC1C24DA042A005C3D30 /* clock.png */,
 				4114CC1424D9FDD6005C3D30 /* forehead-1.png */,
+				4114CC1824DA01E6005C3D30 /* forehead-2.png */,
+				4114CC1924DA01E7005C3D30 /* forehead-3.png */,
+				4114CC1F24DA06DD005C3D30 /* level-one.png */,
+				4114CC2024DA06DD005C3D30 /* level-three.png */,
+				4114CC1E24DA06DD005C3D30 /* level-two.png */,
+				4114CC2424DA08E4005C3D30 /* start-button.png */,
 				41404FDE24D24F3800D870CA /* Assets.xcassets */,
 				41404FE324D24F3800D870CA /* Info.plist */,
 				4140500A24D2541B00D870CA /* entwined-green.json */,
@@ -271,10 +292,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4114CC0F24D9FA78005C3D30 /* charades-welcome-bg.png in Resources */,
+				4114CC2524DA08E4005C3D30 /* start-button.png in Resources */,
+				4114CC2324DA06DD005C3D30 /* level-three.png in Resources */,
+				4114CC1B24DA01E7005C3D30 /* forehead-3.png in Resources */,
 				41245DD224D65B9A00497C9C /* Chat.storyboard in Resources */,
 				41404FDF24D24F3800D870CA /* Assets.xcassets in Resources */,
 				41404FDD24D24F2D00D870CA /* Main.storyboard in Resources */,
+				4114CC1A24DA01E7005C3D30 /* forehead-2.png in Resources */,
+				4114CC1D24DA042B005C3D30 /* clock.png in Resources */,
 				4114CC1524D9FDD6005C3D30 /* forehead-1.png in Resources */,
+				4114CC2224DA06DD005C3D30 /* level-one.png in Resources */,
 				4114CC1724D9FF44005C3D30 /* tester-again.json in Resources */,
 				4140500624D2500800D870CA /* entwined-white.json in Resources */,
 				4140500B24D2541B00D870CA /* entwined-green.json in Resources */,
@@ -282,6 +309,7 @@
 				4140500F24D2587D00D870CA /* leaves.json in Resources */,
 				4114CC1324D9FBCF005C3D30 /* play-button@2x.png in Resources */,
 				4140501124D260A300D870CA /* Onboarding.storyboard in Resources */,
+				4114CC2124DA06DD005C3D30 /* level-two.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
