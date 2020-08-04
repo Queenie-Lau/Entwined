@@ -37,12 +37,13 @@
                     </view>
                     <connections>
                         <outlet property="animationView" destination="z5U-ND-YVj" id="LAl-kw-wK2"/>
+                        <segue destination="1eJ-BT-ImY" kind="show" id="RPz-BG-aHe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="XuU-lz-VdQ">
                     <connections>
-                        <segue destination="1eJ-BT-ImY" kind="show" id="3FB-jP-bX8"/>
+                        <segue destination="1eJ-BT-ImY" kind="modal" modalPresentationStyle="fullScreen" id="3FB-jP-bX8"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -59,4 +60,7 @@
             <point key="canvasLocation" x="834" y="114"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3FB-jP-bX8"/>
+    </inferredMetricsTieBreakers>
 </document>

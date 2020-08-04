@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41245DCE24D65B3300497C9C /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41245DCD24D65B3300497C9C /* Questions.swift */; };
+		41245DD224D65B9A00497C9C /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41245DD124D65B9900497C9C /* Chat.storyboard */; };
 		41404FD624D24F2D00D870CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FD524D24F2D00D870CA /* AppDelegate.swift */; };
 		41404FD824D24F2D00D870CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FD724D24F2D00D870CA /* SceneDelegate.swift */; };
 		41404FDA24D24F2D00D870CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FD924D24F2D00D870CA /* ViewController.swift */; };
@@ -14,16 +16,12 @@
 		41404FDF24D24F3800D870CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41404FDE24D24F3800D870CA /* Assets.xcassets */; };
 		41404FED24D24F3900D870CA /* EntwinedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FEC24D24F3900D870CA /* EntwinedTests.swift */; };
 		41404FF824D24F3900D870CA /* EntwinedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FF724D24F3900D870CA /* EntwinedUITests.swift */; };
+		4140500624D2500800D870CA /* entwined-white.json in Resources */ = {isa = PBXBuildFile; fileRef = 4140500524D2500800D870CA /* entwined-white.json */; };
 		4140500924D2508300D870CA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4140500824D2508300D870CA /* Lottie */; };
+		4140500B24D2541B00D870CA /* entwined-green.json in Resources */ = {isa = PBXBuildFile; fileRef = 4140500A24D2541B00D870CA /* entwined-green.json */; };
+		4140500D24D256EE00D870CA /* entwined-white-test.json in Resources */ = {isa = PBXBuildFile; fileRef = 4140500C24D256EE00D870CA /* entwined-white-test.json */; };
+		4140500F24D2587D00D870CA /* leaves.json in Resources */ = {isa = PBXBuildFile; fileRef = 4140500E24D2587C00D870CA /* leaves.json */; };
 		4140501124D260A300D870CA /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4140501024D260A300D870CA /* Onboarding.storyboard */; };
-		4140501424D54D6D00D870CA /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4140501324D54D6D00D870CA /* Chat.storyboard */; };
-		4140501C24D54F7A00D870CA /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4140501B24D54F7A00D870CA /* Questions.swift */; };
-		4140502024D6261100D870CA /* entwined-official.json in Resources */ = {isa = PBXBuildFile; fileRef = 4140501F24D6261000D870CA /* entwined-official.json */; };
-		4140502224D62C4A00D870CA /* entwined-white.json in Resources */ = {isa = PBXBuildFile; fileRef = 4140502124D62C4800D870CA /* entwined-white.json */; };
-		4140502424D63D9000D870CA /* entwined-final.json in Resources */ = {isa = PBXBuildFile; fileRef = 4140502324D63D8F00D870CA /* entwined-final.json */; };
-		4140502624D63F2500D870CA /* work-please.json in Resources */ = {isa = PBXBuildFile; fileRef = 4140502524D63F2500D870CA /* work-please.json */; };
-		4140502824D641D300D870CA /* second-try.json in Resources */ = {isa = PBXBuildFile; fileRef = 4140502724D641D200D870CA /* second-try.json */; };
-		4140502E24D64AA800D870CA /* logo.json in Resources */ = {isa = PBXBuildFile; fileRef = 4140502D24D64AA800D870CA /* logo.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41245DCD24D65B3300497C9C /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Questions.swift; path = "Chat-Bot/Questions.swift"; sourceTree = SOURCE_ROOT; };
+		41245DD124D65B9900497C9C /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Chat.storyboard; path = "../../../Entwined/Chat-Bot/Chat.storyboard"; sourceTree = "<group>"; };
 		41404FD224D24F2D00D870CA /* Entwined.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Entwined.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41404FD524D24F2D00D870CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41404FD724D24F2D00D870CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,15 +57,11 @@
 		41404FF324D24F3900D870CA /* EntwinedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntwinedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41404FF724D24F3900D870CA /* EntwinedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntwinedUITests.swift; sourceTree = "<group>"; };
 		41404FF924D24F3900D870CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4140500524D2500800D870CA /* entwined-white.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "entwined-white.json"; sourceTree = "<group>"; };
+		4140500A24D2541B00D870CA /* entwined-green.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "entwined-green.json"; sourceTree = "<group>"; };
+		4140500C24D256EE00D870CA /* entwined-white-test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "entwined-white-test.json"; sourceTree = "<group>"; };
+		4140500E24D2587C00D870CA /* leaves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leaves.json; sourceTree = "<group>"; };
 		4140501024D260A300D870CA /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
-		4140501324D54D6D00D870CA /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Chat.storyboard; path = "/Users/queenie/Desktop/Entwined-Test-1/Entwined/Chat-Bot/Chat.storyboard"; sourceTree = "<absolute>"; };
-		4140501B24D54F7A00D870CA /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Questions.swift; path = "/Users/queenie/Desktop/Entwined-Test-1/Entwined/Chat-Bot/Questions.swift"; sourceTree = "<absolute>"; };
-		4140501F24D6261000D870CA /* entwined-official.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "entwined-official.json"; sourceTree = "<group>"; };
-		4140502124D62C4800D870CA /* entwined-white.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "entwined-white.json"; path = "../../../../Downloads/entwined-white.json"; sourceTree = "<group>"; };
-		4140502324D63D8F00D870CA /* entwined-final.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "entwined-final.json"; sourceTree = "<group>"; };
-		4140502524D63F2500D870CA /* work-please.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "work-please.json"; sourceTree = "<group>"; };
-		4140502724D641D200D870CA /* second-try.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "second-try.json"; sourceTree = "<group>"; };
-		4140502D24D64AA800D870CA /* logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logo.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +113,8 @@
 		41404FD424D24F2D00D870CA /* Entwined */ = {
 			isa = PBXGroup;
 			children = (
-				4140501324D54D6D00D870CA /* Chat.storyboard */,
-				4140501B24D54F7A00D870CA /* Questions.swift */,
+				41245DD124D65B9900497C9C /* Chat.storyboard */,
+				41245DCD24D65B3300497C9C /* Questions.swift */,
 				41404FD524D24F2D00D870CA /* AppDelegate.swift */,
 				41404FD724D24F2D00D870CA /* SceneDelegate.swift */,
 				41404FD924D24F2D00D870CA /* ViewController.swift */,
@@ -126,12 +122,10 @@
 				4140501024D260A300D870CA /* Onboarding.storyboard */,
 				41404FDE24D24F3800D870CA /* Assets.xcassets */,
 				41404FE324D24F3800D870CA /* Info.plist */,
-				4140502724D641D200D870CA /* second-try.json */,
-				4140502124D62C4800D870CA /* entwined-white.json */,
-				4140502524D63F2500D870CA /* work-please.json */,
-				4140502D24D64AA800D870CA /* logo.json */,
-				4140501F24D6261000D870CA /* entwined-official.json */,
-				4140502324D63D8F00D870CA /* entwined-final.json */,
+				4140500A24D2541B00D870CA /* entwined-green.json */,
+				4140500524D2500800D870CA /* entwined-white.json */,
+				4140500C24D256EE00D870CA /* entwined-white-test.json */,
+				4140500E24D2587C00D870CA /* leaves.json */,
 			);
 			path = Entwined;
 			sourceTree = "<group>";
@@ -264,15 +258,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41245DD224D65B9A00497C9C /* Chat.storyboard in Resources */,
 				41404FDF24D24F3800D870CA /* Assets.xcassets in Resources */,
-				4140502224D62C4A00D870CA /* entwined-white.json in Resources */,
-				4140502E24D64AA800D870CA /* logo.json in Resources */,
-				4140502624D63F2500D870CA /* work-please.json in Resources */,
-				4140502824D641D300D870CA /* second-try.json in Resources */,
 				41404FDD24D24F2D00D870CA /* Main.storyboard in Resources */,
-				4140502424D63D9000D870CA /* entwined-final.json in Resources */,
-				4140502024D6261100D870CA /* entwined-official.json in Resources */,
-				4140501424D54D6D00D870CA /* Chat.storyboard in Resources */,
+				4140500624D2500800D870CA /* entwined-white.json in Resources */,
+				4140500B24D2541B00D870CA /* entwined-green.json in Resources */,
+				4140500D24D256EE00D870CA /* entwined-white-test.json in Resources */,
+				4140500F24D2587D00D870CA /* leaves.json in Resources */,
 				4140501124D260A300D870CA /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41404FDA24D24F2D00D870CA /* ViewController.swift in Sources */,
-				4140501C24D54F7A00D870CA /* Questions.swift in Sources */,
+				41245DCE24D65B3300497C9C /* Questions.swift in Sources */,
 				41404FD624D24F2D00D870CA /* AppDelegate.swift in Sources */,
 				41404FD824D24F2D00D870CA /* SceneDelegate.swift in Sources */,
 			);

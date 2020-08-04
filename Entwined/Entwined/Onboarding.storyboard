@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMA-mU-Hjs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMA-mU-Hjs">
                                 <rect key="frame" x="67" y="356" width="281" height="184"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
@@ -38,7 +38,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="&gt;"/>
                                 <connections>
-                                    <segue destination="OkB-tW-DNe" kind="showDetail" id="5eK-4m-PF9"/>
+                                    <segue destination="OkB-tW-DNe" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="5eK-4m-PF9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,10 +60,10 @@
             <objects>
                 <viewController id="OkB-tW-DNe" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cOh-Mx-Nlo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euk-L9-Ssh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euk-L9-Ssh">
                                 <rect key="frame" x="67" y="356" width="281" height="184"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
@@ -87,7 +87,7 @@
                                 <state key="normal" title="&gt;"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ESK-6b-OkE" appends="YES" id="wWR-X3-J9F"/>
-                                    <segue destination="vGu-E8-rOs" kind="showDetail" id="qps-cX-Wux"/>
+                                    <segue destination="vGu-E8-rOs" kind="modal" identifier="Third" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="qps-cX-Wux"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -104,15 +104,15 @@
             </objects>
             <point key="canvasLocation" x="-4" y="33"/>
         </scene>
-        <!--View Controller-->
+        <!--Third-->
         <scene sceneID="00s-Iv-FUq">
             <objects>
-                <viewController id="vGu-E8-rOs" sceneMemberID="viewController">
+                <viewController title="Third" id="vGu-E8-rOs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xNU-3O-ehj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg7-xi-uCp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg7-xi-uCp">
                                 <rect key="frame" x="67" y="356" width="281" height="184"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
@@ -133,9 +133,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="&gt;"/>
-                                <connections>
-                                    <segue destination="1EY-bQ-MJC" kind="show" id="gRZ-Wo-FeR"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.61426365380000003" green="0.78373152020000003" blue="0.44695419069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -150,16 +147,6 @@
                 <swipeGestureRecognizer direction="right" id="df2-Pb-IpY"/>
             </objects>
             <point key="canvasLocation" x="857" y="33"/>
-        </scene>
-        <!--Chat-->
-        <scene sceneID="E94-gR-pDG">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Chat" id="1EY-bQ-MJC" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="cPo-GL-1SO"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1ae-93-chB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1646" y="48"/>
         </scene>
     </scenes>
 </document>

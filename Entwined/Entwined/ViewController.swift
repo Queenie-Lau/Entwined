@@ -8,7 +8,6 @@
 
 import UIKit
 import Lottie
-var animationPlayedAlready = false
 
 class ViewController: UIViewController {
 
@@ -21,32 +20,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if(animationPlayedAlready == false){
-            lottieAnimation()
-            animationPlayedAlready = true;
-        }
+        lottieAnimation()
         if(questionField != nil){
             questionField.becomeFirstResponder()
         }
     }
     
     func lottieAnimation(){
-        let animationView = AnimationView(name: "logo")
-        animationView.frame = CGRect(x:-30, y: -800, width: 400, height: 700)
+        
+        let animationView = AnimationView(name: "leaves")
+        animationView.frame = CGRect(x:0, y: 0, width: 400, height: 700)
         animationView.center = self.view.center
         animationView.contentMode = .scaleAspectFit
         view.addSubview(animationView)
-        if(animationPlayedAlready == false){
-            animationView.play()
-            animationView.loopMode = .loop
-        }
-        if(self.animationView != nil){
-                self.animationView.layer.removeAllAnimations()
-                self.view.layer.removeAllAnimations()
-                self.view.layoutIfNeeded()
-            }
-        
-        }
+        animationView.play()
+        animationView.loopMode = .loop;
+        // Loop animation
+    
+    }
     
     // Create Environmental Chat Bot
     func respondToQuestion(_ inputQuestion: String) {
@@ -71,7 +62,7 @@ class ViewController: UIViewController {
 }
 
     extension ViewController: UITextFieldDelegate {
-    
+
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             textField.resignFirstResponder()
             return false
