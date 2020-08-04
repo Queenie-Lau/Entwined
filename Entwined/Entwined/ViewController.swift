@@ -28,13 +28,13 @@ class ViewController: UIViewController {
     
     func lottieAnimation(){
         
-        let animationView = AnimationView(name: "leaves")
+        let animationView = AnimationView(name: "tester-again")
         animationView.frame = CGRect(x:0, y: 0, width: 400, height: 700)
         animationView.center = self.view.center
         animationView.contentMode = .scaleAspectFit
         view.addSubview(animationView)
         animationView.play()
-        animationView.loopMode = .loop;
+        animationView.loopMode = .autoReverse;
         // Loop animation
     
     }

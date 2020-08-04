@@ -24,7 +24,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.61426365380000003" green="0.78373152020000003" blue="0.44695419069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.50373774770000002" green="0.61751669649999996" blue="0.45486271379999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="z5U-ND-YVj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6gS-mp-Ks8"/>
