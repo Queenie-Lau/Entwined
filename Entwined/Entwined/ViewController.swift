@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         if(questionField != nil){
             questionField.becomeFirstResponder()
         }
+        
     }
     
     func lottieAnimation(){

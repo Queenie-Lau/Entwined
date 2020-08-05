@@ -10,7 +10,7 @@
         <!--WelcomeVC-->
         <scene sceneID="MVj-II-gtx">
             <objects>
-                <viewController storyboardIdentifier="WelcomeVC" title="Welcome" id="5ua-C0-zUw" userLabel="WelcomeVC" customClass="ViewController" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" title="Welcome" id="5ua-C0-zUw" userLabel="WelcomeVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I8O-Uz-07r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

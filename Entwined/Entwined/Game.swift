@@ -10,29 +10,49 @@ import UIKit
 import Lottie
 
 class Game: UIViewController {
- 
-    @IBAction func clickMe(_ sender: UIButton) {
-    }
-    //    @IBAction func delay(_ sender: Any) {
-//        self.performSegue(withIdentifier: "FirstCard", sender: self)
-//    }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//       if segue.identifier == "FirstCard" {
-//           if let destination = segue.destination as? Game {
-//
-//                destination.nomb = Button[(sender as! UIButton).tag] // Using button Tag
-//           }
-//       }
+//    @IBAction func workPlease(_ sender: UIButton) {
+//        self.performSegue(withIdentifier: "FirstCard", sender: self)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//            self.performSegue(withIdentifier: "FirstCard", sender: self)
+//        }
+      
+//        print("went inside here")
 //    }
-    var countdownComplete = false
-    var playedOnce = false
+    static var animationPlayed = false
     @IBOutlet weak var animationView: AnimationView!
     var orientations = UIInterfaceOrientationMask.landscape
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
     get { return self.orientations }
     set { self.orientations = newValue }
     }
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if(Game.animationPlayed == false){
+            lottieAnimation()
+        
+//            lottieView.removeFromSuperview()
+        }
+
+        // Get main screen bounds
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        let yourView = UIView(frame: CGRect(x: 0, y: 0, width: screenHeight, height: screenWidth))
+        yourView.layer.borderWidth = 10
+        yourView.layer.cornerRadius = 40
+        yourView.layer.borderColor = UIColor(red:233/255, green:247/255, blue:171/255, alpha: 1).cgColor
+        view.insertSubview(yourView, at: 0)
+    }
+//    override func viewDidAppear(_ animated: Bool) {
+//          func performSegue(withIdentifier: String, sender: Any?){
+//                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                     performSegue(withIdentifier: "FirstCard", sender: self)
+//                 }
+//             }
+//    }
     
     func lottieAnimation(){
         
@@ -42,8 +62,7 @@ class Game: UIViewController {
          self.view.addSubview(lottieView)
          lottieView.contentMode = .scaleAspectFit
          lottieView.play(toFrame: .infinity)
-         countdownComplete = true
-         playedOnce = true
+
          lottieView.translatesAutoresizingMaskIntoConstraints = false
          NSLayoutConstraint.activate([
              lottieView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
@@ -51,55 +70,8 @@ class Game: UIViewController {
              lottieView.topAnchor.constraint(equalTo: self.view.topAnchor),
              lottieView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
          ])
+        view.sendSubviewToBack(lottieView)
+        Game.animationPlayed = true
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if(playedOnce == false){
-            lottieAnimation()
-        }
-        // Get main screen bounds
-        let screenSize: CGRect = UIScreen.main.bounds
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
-        let yourView = UIView(frame: CGRect(x: 0, y: 0, width: screenHeight, height: screenWidth))
-        yourView.layer.borderWidth = 10
-        yourView.layer.cornerRadius = 40
-        yourView.layer.borderColor = UIColor(red:233/255, green:247/255, blue:171/255, alpha: 1).cgColor
-        view.addSubview(yourView)
-     
-    }
-//    func transitionAfterCountdown() {
-//        delay(UIButton())
-//         print("transitioned\\\\e")
-//    }
-//        if(countdownComplete == true){
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//                self.performSegue(withIdentifier: "FirstCard", sender: self)
-//            }
-//        }
-//    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
-//      self.performSegue(withIdentifier: "FirstCard", sender: self)
-//    }
-        
-//     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//
-//            if (segue.identifier == "FirstCard") {
-//               let viewController = segue.destination as? FirstCard
-//                viewController!.OrderData = self.MyorderArray[selectedIndex]
-//                print("ran")
-//
-//            }
-//                print("didn't run")
-//        }
-    
-            
-//    @objc func authenticate(){}
-    
-//    @IBAction func Button(_ sender: Any) {
-//        if(countdownComplete == true){
-//            performSegue(withIdentifier: "Countdown", sender: nil)
-//        }
-//    }
 }
-
