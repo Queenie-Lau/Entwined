@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Lottie
 
 class Game: UIViewController {
     
-    var orientations = UIInterfaceOrientationMask.landscape //or what orientation you want
+ 
+    @IBOutlet weak var animationView: AnimationView!
+    var orientations = UIInterfaceOrientationMask.landscape
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
     get { return self.orientations }
     set { self.orientations = newValue }
@@ -19,6 +22,7 @@ class Game: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        lottieAnimation()
         // Get main screen bounds
         let screenSize: CGRect = UIScreen.main.bounds
         let screenWidth = screenSize.width
@@ -31,15 +35,23 @@ class Game: UIViewController {
      
     }
     
+    func lottieAnimation(){
+        
+         let countdown = Animation.named("countdown")
+         let lottieView = AnimationView(animation: countdown)
 
-    /*
-    // MARK: - Navigation
+         self.view.addSubview(lottieView)
+         lottieView.contentMode = .scaleAspectFit
+         lottieView.play(toFrame: .infinity)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+         lottieView.translatesAutoresizingMaskIntoConstraints = false
+         NSLayoutConstraint.activate([
+             lottieView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+             lottieView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+             lottieView.topAnchor.constraint(equalTo: self.view.topAnchor),
+             lottieView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+         ])
+
     }
-    */
-
+    
 }
