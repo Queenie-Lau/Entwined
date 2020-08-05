@@ -37,7 +37,7 @@
                     </view>
                     <connections>
                         <outlet property="animationView" destination="z5U-ND-YVj" id="LAl-kw-wK2"/>
-                        <segue destination="1eJ-BT-ImY" kind="show" id="RPz-BG-aHe"/>
+                        <segue destination="1eJ-BT-ImY" kind="show" identifier="Welcome" id="RPz-BG-aHe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -61,6 +61,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3FB-jP-bX8"/>
+        <segue reference="RPz-BG-aHe"/>
     </inferredMetricsTieBreakers>
 </document>

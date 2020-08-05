@@ -22,6 +22,8 @@
 		4114CC2924DA48AB005C3D30 /* correct-forehead.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC2824DA48AB005C3D30 /* correct-forehead.png */; };
 		4114CC2B24DA48B8005C3D30 /* incorrect-forehead.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC2A24DA48B8005C3D30 /* incorrect-forehead.png */; };
 		4114CC2D24DA4E85005C3D30 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC2C24DA4E85005C3D30 /* Game.storyboard */; };
+		4114CC2F24DA5074005C3D30 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4114CC2E24DA5074005C3D30 /* Game.swift */; };
+		4114CC3324DA63EA005C3D30 /* countdown.json in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC3224DA63EA005C3D30 /* countdown.json */; };
 		41245DCE24D65B3300497C9C /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41245DCD24D65B3300497C9C /* Questions.swift */; };
 		41245DD224D65B9A00497C9C /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41245DD124D65B9900497C9C /* Chat.storyboard */; };
 		41404FD624D24F2D00D870CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FD524D24F2D00D870CA /* AppDelegate.swift */; };
@@ -72,6 +74,8 @@
 		4114CC2824DA48AB005C3D30 /* correct-forehead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "correct-forehead.png"; sourceTree = "<group>"; };
 		4114CC2A24DA48B8005C3D30 /* incorrect-forehead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "incorrect-forehead.png"; sourceTree = "<group>"; };
 		4114CC2C24DA4E85005C3D30 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		4114CC2E24DA5074005C3D30 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		4114CC3224DA63EA005C3D30 /* countdown.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = countdown.json; path = ../../../../../Downloads/countdown.json; sourceTree = "<group>"; };
 		41245DCD24D65B3300497C9C /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Questions.swift; path = "Chat-Bot/Questions.swift"; sourceTree = SOURCE_ROOT; };
 		41245DD124D65B9900497C9C /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Chat.storyboard; path = "../../../Entwined/Chat-Bot/Chat.storyboard"; sourceTree = "<group>"; };
 		41404FD224D24F2D00D870CA /* Entwined.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Entwined.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +155,7 @@
 				41404FDB24D24F2D00D870CA /* Main.storyboard */,
 				4114CC2C24DA4E85005C3D30 /* Game.storyboard */,
 				4140501024D260A300D870CA /* Onboarding.storyboard */,
+				4114CC2E24DA5074005C3D30 /* Game.swift */,
 				4114CC0E24D9FA78005C3D30 /* charades-welcome-bg.png */,
 				4114CC1224D9FBCF005C3D30 /* play-button@2x.png */,
 				4114CC1624D9FF44005C3D30 /* tester-again.json */,
@@ -171,6 +176,7 @@
 				4140500524D2500800D870CA /* entwined-white.json */,
 				4140500C24D256EE00D870CA /* entwined-white-test.json */,
 				4140500E24D2587C00D870CA /* leaves.json */,
+				4114CC3224DA63EA005C3D30 /* countdown.json */,
 			);
 			path = Entwined;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 				4114CC1D24DA042B005C3D30 /* clock.png in Resources */,
 				4114CC1524D9FDD6005C3D30 /* forehead-1.png in Resources */,
 				4114CC2224DA06DD005C3D30 /* level-one.png in Resources */,
+				4114CC3324DA63EA005C3D30 /* countdown.json in Resources */,
 				4114CC1724D9FF44005C3D30 /* tester-again.json in Resources */,
 				4140500624D2500800D870CA /* entwined-white.json in Resources */,
 				4140500B24D2541B00D870CA /* entwined-green.json in Resources */,
@@ -351,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41404FDA24D24F2D00D870CA /* ViewController.swift in Sources */,
+				4114CC2F24DA5074005C3D30 /* Game.swift in Sources */,
 				41245DCE24D65B3300497C9C /* Questions.swift in Sources */,
 				41404FD624D24F2D00D870CA /* AppDelegate.swift in Sources */,
 				41404FD824D24F2D00D870CA /* SceneDelegate.swift in Sources */,

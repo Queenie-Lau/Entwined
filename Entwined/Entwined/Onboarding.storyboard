@@ -10,7 +10,7 @@
         <!--WelcomeVC-->
         <scene sceneID="MVj-II-gtx">
             <objects>
-                <viewController storyboardIdentifier="WelcomeVC" id="5ua-C0-zUw" userLabel="WelcomeVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" title="Welcome" id="5ua-C0-zUw" userLabel="WelcomeVC" customClass="ViewController" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I8O-Uz-07r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -432,7 +432,7 @@ to the next word</string>
                                     <color key="titleColor" red="0.086054392158985138" green="0.41069817543029785" blue="0.21969392895698547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SRQ-um-M4d" kind="show" id="2Bx-94-IlB"/>
+                                    <segue destination="SRQ-um-M4d" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="2Bx-94-IlB"/>
                                 </connections>
                             </button>
                         </subviews>
