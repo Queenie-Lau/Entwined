@@ -18,6 +18,10 @@
 		4114CC2224DA06DD005C3D30 /* level-one.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC1F24DA06DD005C3D30 /* level-one.png */; };
 		4114CC2324DA06DD005C3D30 /* level-three.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC2024DA06DD005C3D30 /* level-three.png */; };
 		4114CC2524DA08E4005C3D30 /* start-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC2424DA08E4005C3D30 /* start-button.png */; };
+		4114CC2724DA4899005C3D30 /* guessing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC2624DA4898005C3D30 /* guessing.png */; };
+		4114CC2924DA48AB005C3D30 /* correct-forehead.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC2824DA48AB005C3D30 /* correct-forehead.png */; };
+		4114CC2B24DA48B8005C3D30 /* incorrect-forehead.png in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC2A24DA48B8005C3D30 /* incorrect-forehead.png */; };
+		4114CC2D24DA4E85005C3D30 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4114CC2C24DA4E85005C3D30 /* Game.storyboard */; };
 		41245DCE24D65B3300497C9C /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41245DCD24D65B3300497C9C /* Questions.swift */; };
 		41245DD224D65B9A00497C9C /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41245DD124D65B9900497C9C /* Chat.storyboard */; };
 		41404FD624D24F2D00D870CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FD524D24F2D00D870CA /* AppDelegate.swift */; };
@@ -64,6 +68,10 @@
 		4114CC1F24DA06DD005C3D30 /* level-one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-one.png"; sourceTree = "<group>"; };
 		4114CC2024DA06DD005C3D30 /* level-three.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level-three.png"; sourceTree = "<group>"; };
 		4114CC2424DA08E4005C3D30 /* start-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start-button.png"; sourceTree = "<group>"; };
+		4114CC2624DA4898005C3D30 /* guessing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guessing.png; sourceTree = "<group>"; };
+		4114CC2824DA48AB005C3D30 /* correct-forehead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "correct-forehead.png"; sourceTree = "<group>"; };
+		4114CC2A24DA48B8005C3D30 /* incorrect-forehead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "incorrect-forehead.png"; sourceTree = "<group>"; };
+		4114CC2C24DA4E85005C3D30 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		41245DCD24D65B3300497C9C /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Questions.swift; path = "Chat-Bot/Questions.swift"; sourceTree = SOURCE_ROOT; };
 		41245DD124D65B9900497C9C /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Chat.storyboard; path = "../../../Entwined/Chat-Bot/Chat.storyboard"; sourceTree = "<group>"; };
 		41404FD224D24F2D00D870CA /* Entwined.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Entwined.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +149,7 @@
 				41404FD724D24F2D00D870CA /* SceneDelegate.swift */,
 				41404FD924D24F2D00D870CA /* ViewController.swift */,
 				41404FDB24D24F2D00D870CA /* Main.storyboard */,
+				4114CC2C24DA4E85005C3D30 /* Game.storyboard */,
 				4140501024D260A300D870CA /* Onboarding.storyboard */,
 				4114CC0E24D9FA78005C3D30 /* charades-welcome-bg.png */,
 				4114CC1224D9FBCF005C3D30 /* play-button@2x.png */,
@@ -149,10 +158,13 @@
 				4114CC1424D9FDD6005C3D30 /* forehead-1.png */,
 				4114CC1824DA01E6005C3D30 /* forehead-2.png */,
 				4114CC1924DA01E7005C3D30 /* forehead-3.png */,
+				4114CC2624DA4898005C3D30 /* guessing.png */,
 				4114CC1F24DA06DD005C3D30 /* level-one.png */,
 				4114CC2024DA06DD005C3D30 /* level-three.png */,
 				4114CC1E24DA06DD005C3D30 /* level-two.png */,
 				4114CC2424DA08E4005C3D30 /* start-button.png */,
+				4114CC2824DA48AB005C3D30 /* correct-forehead.png */,
+				4114CC2A24DA48B8005C3D30 /* incorrect-forehead.png */,
 				41404FDE24D24F3800D870CA /* Assets.xcassets */,
 				41404FE324D24F3800D870CA /* Info.plist */,
 				4140500A24D2541B00D870CA /* entwined-green.json */,
@@ -295,10 +307,14 @@
 				4114CC2524DA08E4005C3D30 /* start-button.png in Resources */,
 				4114CC2324DA06DD005C3D30 /* level-three.png in Resources */,
 				4114CC1B24DA01E7005C3D30 /* forehead-3.png in Resources */,
+				4114CC2724DA4899005C3D30 /* guessing.png in Resources */,
 				41245DD224D65B9A00497C9C /* Chat.storyboard in Resources */,
 				41404FDF24D24F3800D870CA /* Assets.xcassets in Resources */,
 				41404FDD24D24F2D00D870CA /* Main.storyboard in Resources */,
+				4114CC2D24DA4E85005C3D30 /* Game.storyboard in Resources */,
 				4114CC1A24DA01E7005C3D30 /* forehead-2.png in Resources */,
+				4114CC2B24DA48B8005C3D30 /* incorrect-forehead.png in Resources */,
+				4114CC2924DA48AB005C3D30 /* correct-forehead.png in Resources */,
 				4114CC1D24DA042B005C3D30 /* clock.png in Resources */,
 				4114CC1524D9FDD6005C3D30 /* forehead-1.png in Resources */,
 				4114CC2224DA06DD005C3D30 /* level-one.png in Resources */,

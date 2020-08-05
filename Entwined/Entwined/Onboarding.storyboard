@@ -74,13 +74,9 @@
                                 </state>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="p9J-Mb-hRO" appends="YES" id="s4D-TY-ZjI"/>
-                                    <segue destination="vGu-E8-rOs" kind="modal" identifier="Third" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="qps-cX-Wux"/>
+                                    <segue destination="BCo-OW-QFi" kind="presentation" identifier="Guess" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="8dZ-xa-jKB"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forehead-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="3QD-LY-9Jf">
-                                <rect key="frame" x="-42" y="200" width="499" height="266"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Place phone on forehead" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq6-wH-sls">
                                 <rect key="frame" x="107" y="496" width="201" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -88,12 +84,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-5q-Dpq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forehead-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="3QD-LY-9Jf">
+                                <rect key="frame" x="-42" y="200" width="499" height="266"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-5q-Dpq">
                                 <rect key="frame" x="188" y="614" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.61426365380000003" green="0.78373152020000003" blue="0.44695419069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2s6-af-bJZ">
+                                <rect key="frame" x="72" y="772" width="55" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <state key="normal" title="S K I P">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BaO-wA-oI4" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="mXn-Lo-qtt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -125,7 +136,7 @@
                                     <segue destination="knY-Hx-M4n" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="u6E-0x-N3s"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forehead-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="C61-hc-zuR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="correct-forehead.png" translatesAutoresizingMaskIntoConstraints="NO" id="C61-hc-zuR">
                                 <rect key="frame" x="-52" y="189" width="519" height="276"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -136,7 +147,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="B4o-M9-Y13">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="B4o-M9-Y13">
                                 <rect key="frame" x="184" y="621" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -150,11 +161,12 @@
                             <outletCollection property="gestureRecognizers" destination="df2-Pb-IpY" appends="YES" id="xly-hX-zJz"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="Avg-zj-RTd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWB-Mb-KYK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="df2-Pb-IpY"/>
             </objects>
-            <point key="canvasLocation" x="856.52173913043487" y="32.8125"/>
+            <point key="canvasLocation" x="1861" y="33"/>
         </scene>
         <!--Levels-->
         <scene sceneID="aBo-uC-8ve">
@@ -164,15 +176,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkz-PJ-W09">
-                                <rect key="frame" x="75" y="140" width="264" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="52"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="level-one.png" translatesAutoresizingMaskIntoConstraints="NO" id="NBZ-z0-zBv">
-                                <rect key="frame" x="63" y="245" width="301" height="160"/>
+                                <rect key="frame" x="57" y="254" width="301" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="level-two.png" translatesAutoresizingMaskIntoConstraints="NO" id="sL9-1N-CJ1">
@@ -183,8 +188,19 @@
                                 <rect key="frame" x="44" y="536" width="309" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckT-ay-PzN">
+                                <rect key="frame" x="122" y="309" width="138" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="Level One">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OkB-tW-DNe" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Y8b-Nd-WX6"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5E-b2-pI6">
-                                <rect key="frame" x="128" y="459" width="132" height="51"/>
+                                <rect key="frame" x="128" y="458" width="132" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <state key="normal" title="Level Two">
@@ -205,17 +221,13 @@
                                     <segue destination="OkB-tW-DNe" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="FaB-aL-D95"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckT-ay-PzN">
-                                <rect key="frame" x="129" y="300" width="138" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkz-PJ-W09">
+                                <rect key="frame" x="72" y="150" width="264" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                <state key="normal" title="Level One">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="OkB-tW-DNe" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Y8b-Nd-WX6"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="52"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.83636277910000001" green="0.91112971310000002" blue="0.8038989902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
@@ -230,6 +242,59 @@
                 <swipeGestureRecognizer direction="right" id="den-Ve-qFo"/>
             </objects>
             <point key="canvasLocation" x="-939.13043478260875" y="984.375"/>
+        </scene>
+        <!--Guess-->
+        <scene sceneID="XBO-gH-uva">
+            <objects>
+                <viewController id="BCo-OW-QFi" userLabel="Guess" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t2k-Js-X2O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guessing.png" translatesAutoresizingMaskIntoConstraints="NO" id="e0s-fP-rrK">
+                                <rect key="frame" x="-46" y="207" width="507" height="269"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="K4H-GY-sFW">
+                                <rect key="frame" x="188" y="662" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.61426365380000003" green="0.78373152020000003" blue="0.44695419069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1x-rP-ixB">
+                                <rect key="frame" x="75" y="484" width="264" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Teammates provide
+clues to guess the
+word without
+saying it directly</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u01-wx-SGI">
+                                <rect key="frame" x="-3" y="-47" width="421" height="943"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XkF-qX-mCd" appends="YES" id="1fc-KW-zKn"/>
+                                    <segue destination="vGu-E8-rOs" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="a5r-cu-S4N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="buQ-8y-WwI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OBR-36-QY5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lJ-js-qTL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="XkF-qX-mCd"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="33"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9tx-9k-Pn7">
@@ -250,23 +315,26 @@
                                     <segue destination="WQx-bp-bk9" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="wRb-fZ-LKo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tilt backwards for incorrect guesses" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3B-w1-Zmq">
-                                <rect key="frame" x="65" y="512" width="284" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="nb2-0A-zih">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="nb2-0A-zih">
                                 <rect key="frame" x="184" y="630" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.61426365380000003" green="0.78373152020000003" blue="0.44695419069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forehead-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="J2c-hY-yzy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="incorrect-forehead.png" translatesAutoresizingMaskIntoConstraints="NO" id="J2c-hY-yzy">
                                 <rect key="frame" x="-55" y="197" width="516" height="275"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3B-w1-Zmq">
+                                <rect key="frame" x="65" y="494" width="276" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Tilt backwards
+to skip and move on
+to the next word</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -280,7 +348,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="df9-u3-ZcA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="2cu-QJ-NR2"/>
             </objects>
-            <point key="canvasLocation" x="1747.826086956522" y="32.8125"/>
+            <point key="canvasLocation" x="2752" y="33"/>
         </scene>
         <!--Fourth-->
         <scene sceneID="dcg-jr-fdf">
@@ -294,6 +362,17 @@
                                 <rect key="frame" x="-55" y="209" width="524" height="279"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbm-Ah-UmR">
+                                <rect key="frame" x="0.0" y="-47" width="421" height="943"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BaO-wA-oI4" kind="modal" identifier="Start" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ghO-Vp-0qg"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="40 seconds" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjj-Eg-Mmq">
                                 <rect key="frame" x="94" y="496" width="226" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -308,23 +387,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="E96-K7-bwa">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="4" translatesAutoresizingMaskIntoConstraints="NO" id="E96-K7-bwa">
                                 <rect key="frame" x="188" y="649" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.61426365380000003" green="0.78373152020000003" blue="0.44695419069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbm-Ah-UmR">
-                                <rect key="frame" x="0.0" y="-47" width="421" height="943"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="&gt;">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BaO-wA-oI4" kind="modal" identifier="Start" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ghO-Vp-0qg"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -338,7 +406,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YeE-4O-cwo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="egu-1J-9wM"/>
             </objects>
-            <point key="canvasLocation" x="2621.739130434783" y="32.8125"/>
+            <point key="canvasLocation" x="3626" y="33"/>
         </scene>
         <!--Start-->
         <scene sceneID="LtA-St-xoK">
@@ -363,6 +431,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="0.086054392158985138" green="0.41069817543029785" blue="0.21969392895698547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="SRQ-um-M4d" kind="show" id="2Bx-94-IlB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83636277910000001" green="0.91112971310000002" blue="0.8038989902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -377,18 +448,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XVO-MB-Oeq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="E5b-zJ-c3t"/>
             </objects>
-            <point key="canvasLocation" x="3526" y="33"/>
+            <point key="canvasLocation" x="4529" y="33"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="P8m-e4-obF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Game" id="SRQ-um-M4d" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wQI-Uc-40l"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIv-l1-AcM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5631" y="25"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="mXn-Lo-qtt"/>
         <segue reference="FaB-aL-D95"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="charades-welcome-bg.png" width="320" height="457"/>
         <image name="clock.png" width="653" height="653"/>
+        <image name="correct-forehead.png" width="296" height="296"/>
         <image name="forehead-1.png" width="960" height="958"/>
-        <image name="forehead-2.png" width="678" height="677"/>
-        <image name="forehead-3.png" width="679" height="677"/>
+        <image name="guessing.png" width="302" height="302"/>
+        <image name="incorrect-forehead.png" width="296" height="296"/>
         <image name="level-one.png" width="497" height="263"/>
         <image name="level-three.png" width="515" height="244"/>
         <image name="level-two.png" width="534" height="201"/>

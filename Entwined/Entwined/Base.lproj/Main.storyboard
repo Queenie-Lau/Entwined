@@ -43,7 +43,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="XuU-lz-VdQ">
                     <connections>
-                        <segue destination="1eJ-BT-ImY" kind="modal" modalPresentationStyle="fullScreen" id="3FB-jP-bX8"/>
+                        <segue destination="1eJ-BT-ImY" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3FB-jP-bX8"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
