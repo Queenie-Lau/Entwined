@@ -32,14 +32,20 @@ class Game: UIViewController {
         super.viewDidLoad()
         if(Game.animationPlayed == false){
             lottieAnimation()
-        
-//            lottieView.removeFromSuperview()
         }
 
         // Get main screen bounds
         let screenSize: CGRect = UIScreen.main.bounds
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
+        var screenWidth = screenSize.width
+        var screenHeight = screenSize.height
+        var temp = screenHeight
+        print(screenWidth)
+        print(screenHeight)
+        if(screenWidth > screenHeight){
+            temp = screenHeight
+            screenHeight = screenWidth
+            screenWidth = temp
+        }
         let yourView = UIView(frame: CGRect(x: 0, y: 0, width: screenHeight, height: screenWidth))
         yourView.layer.borderWidth = 10
         yourView.layer.cornerRadius = 40
