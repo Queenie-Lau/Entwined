@@ -65,20 +65,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76n-w7-Y2i">
-                                <rect key="frame" x="438" y="284" width="50" height="66"/>
+                                <rect key="frame" x="423" y="291" width="50" height="52"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="76n-w7-Y2i" firstAttribute="top" secondItem="9bc-Bc-JNQ" secondAttribute="top" constant="284" id="ArU-8F-Fpw"/>
-                            <constraint firstItem="9bc-Bc-JNQ" firstAttribute="bottom" secondItem="76n-w7-Y2i" secondAttribute="bottom" constant="43" id="MzC-vd-kHz"/>
-                            <constraint firstItem="76n-w7-Y2i" firstAttribute="leading" secondItem="9bc-Bc-JNQ" secondAttribute="leading" constant="394" id="TCG-Ny-lIZ"/>
-                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerX" secondItem="dIu-QX-Jh9" secondAttribute="centerX" id="gP3-Lg-zjZ"/>
-                            <constraint firstItem="9bc-Bc-JNQ" firstAttribute="trailing" secondItem="76n-w7-Y2i" secondAttribute="trailing" constant="364" id="hbc-En-zJd"/>
-                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerY" secondItem="dIu-QX-Jh9" secondAttribute="centerY" id="ptr-Yq-0Mw"/>
+                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerX" secondItem="76n-w7-Y2i" secondAttribute="centerX" id="132-Gx-X7F"/>
+                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerX" secondItem="dIu-QX-Jh9" secondAttribute="centerX" id="Osk-Pi-Jap"/>
+                            <constraint firstItem="76n-w7-Y2i" firstAttribute="top" secondItem="9bc-Bc-JNQ" secondAttribute="top" constant="291" id="a1e-om-NCy"/>
+                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerY" secondItem="dIu-QX-Jh9" secondAttribute="centerY" id="bvm-7n-pyJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9bc-Bc-JNQ"/>
                     </view>
@@ -86,11 +85,34 @@
                     <connections>
                         <outlet property="timerLabel" destination="76n-w7-Y2i" id="7Zp-hF-ezh"/>
                         <outlet property="word" destination="AL3-9W-ALF" id="vhV-ed-NoT"/>
+                        <segue destination="dbT-KH-ghA" kind="show" identifier="Results" id="0MR-Pj-RNg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l37-n7-5IS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="ONS-uG-rVs">
+                    <connections>
+                        <action selector="correctGuess:" destination="bkb-15-2Hx" id="Wev-MY-eLn"/>
+                        <outlet property="delegate" destination="dIu-QX-Jh9" id="v6D-c8-ovg"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="270.53571428571428" y="108.69565217391305"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="jur-Dl-Ef6">
+            <objects>
+                <viewController storyboardIdentifier="Results" title="Results" id="dbT-KH-ghA" userLabel="Results" customClass="Game" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fn9-Gy-LGT">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="eXt-Ye-qc2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P5j-hc-GgN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gce-PN-sCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="109"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
