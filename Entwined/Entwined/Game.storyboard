@@ -20,50 +20,77 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEz-X2-T8N">
-                                <rect key="frame" x="363" y="9" width="200" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvB-3W-eMQ">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
-                                <state key="normal" title="Get ready!">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="bkb-15-2Hx" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="qQk-Jj-JL0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="QAO-Gv-uux"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dTZ-vo-EX4" appends="YES" id="Jfe-44-YzZ"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="animationView" destination="8M9-iM-ufa" id="qpD-Dw-cWW"/>
-                        <segue destination="bkb-15-2Hx" kind="show" id="0X2-M7-yFd"/>
+                        <segue destination="bkb-15-2Hx" kind="modal" identifier="Transition" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="pEz-zh-kOO"/>
+                        <segue destination="bkb-15-2Hx" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ONF-xf-QNf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cB2-G5-1PT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dTZ-vo-EX4"/>
             </objects>
             <point key="canvasLocation" x="-500.22321428571428" y="108.69565217391305"/>
         </scene>
-        <!--Game-->
+        <!--Transition-->
         <scene sceneID="dRz-kW-aCX">
             <objects>
-                <viewController id="bkb-15-2Hx" customClass="Game" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Transition" id="bkb-15-2Hx" customClass="Game" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dIu-QX-Jh9">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="[game word]" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-tj-qgd">
-                                <rect key="frame" x="152" y="377" width="110" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL3-9W-ALF">
+                                <rect key="frame" x="448" y="207" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76n-w7-Y2i">
+                                <rect key="frame" x="423" y="291" width="50" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerY" secondItem="dIu-QX-Jh9" secondAttribute="centerY" id="j0a-Qq-cdY"/>
+                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerX" secondItem="dIu-QX-Jh9" secondAttribute="centerX" id="j66-VH-xXL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9bc-Bc-JNQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="hQh-CH-Bh4"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="76n-w7-Y2i" id="7Zp-hF-ezh"/>
+                        <outlet property="word" destination="AL3-9W-ALF" id="vhV-ed-NoT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l37-n7-5IS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271" y="110"/>
+            <point key="canvasLocation" x="270.53571428571428" y="108.69565217391305"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ONF-xf-QNf"/>
+    </inferredMetricsTieBreakers>
 </document>
