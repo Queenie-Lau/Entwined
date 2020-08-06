@@ -11,11 +11,16 @@ import Lottie
 import CoreMotion
 
 class Game: UIViewController {
+
+    @IBAction func correctGuess(_ sender: Any) {
+    }
     
     @IBOutlet weak var timerLabel: UILabel!
+    
     var seconds = 40
     var timer = Timer()
     var timerIsOn = false
+    var currLevel = -1
     
     @IBOutlet weak var word: UILabel!
     
@@ -61,19 +66,66 @@ class Game: UIViewController {
                 if (ChooseLevel.getLevel.levelOne == true){
                    self.word.text = getLevelOneWord()
                    self.word.center = self.view.center
+                    var currLevel = 1
                 }
                 else if (ChooseLevel.getLevel.levelTwo == true) {
                     self.word.text =  getLevelTwoWord()
                     self.word.center = self.view.center
+                    var currLevel = 2
                 }
                 else {
                     self.word.text =  getLevelThreeWord()
                     self.word.center = self.view.center
+                    var currLevel = 3
                 }
             }
         }
         // Add timer
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
+        
+        // Get gesture
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(Game.handleSwipe))
+        swipeUp.direction = .up
+        self.view.addGestureRecognizer(swipeUp)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(Game.handleSwipe))
+           swipeDown.direction = .down
+           self.view.addGestureRecognizer(swipeDown)
+    }
+    
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+        print("swipe direction is", sender.direction)
+        // Check whether the word is correct or incorrect
+        if(sender.direction == .up){
+            print("correct answer")
+            if(seconds > 0){
+                if(currLevel == 1){
+                    self.word.text = getLevelOneWord()
+                    
+                }
+                else if(currLevel == 2){
+                    self.word.text = getLevelTwoWord()
+                }
+                else{
+                    self.word.text = getLevelThreeWord()
+                }
+            }
+        }
+        else if(sender.direction == .down){
+            print("incorrect answer")
+            if(seconds > 0){
+                if(currLevel == 1){
+                    self.word.text = getLevelOneWord()
+                    
+                }
+                else if(currLevel == 2){
+                    self.word.text = getLevelTwoWord()
+                }
+                else{
+                    self.word.text = getLevelThreeWord()
+                }
+            }
+        }
     }
 
     func lottieAnimation(){
@@ -108,13 +160,32 @@ class Game: UIViewController {
                     if(self.word != nil){
                         if(seenWords.contains(self.word.text!) == false){
                             incorrectWords.append(self.word.text!)
+                            if(ChooseLevel.getLevel.levelOne == true){
+                                 self.word.text = getLevelOneWord()
+                            }
+                            else if(ChooseLevel.getLevel.levelOne == true){
+                                self.word.text = getLevelTwoWord()
+                            }
+                            else{
+                                self.word.text = getLevelThreeWord()
+                            }
                         }
                     }
                  }
+                    
                  else if(abs(rollValue) > 1){
                     if(self.word != nil){
                         if(seenWords.contains(self.word.text!) == false){
                             correctWords.append(self.word.text!)
+                        }
+                        if(ChooseLevel.getLevel.levelOne == true){
+                             self.word.text = getLevelOneWord()
+                        }
+                        else if(ChooseLevel.getLevel.levelOne == true){
+                            self.word.text = getLevelTwoWord()
+                        }
+                        else{
+                            self.word.text = getLevelThreeWord()
                         }
                     }
                  }
