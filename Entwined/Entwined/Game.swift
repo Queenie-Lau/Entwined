@@ -12,6 +12,10 @@ import CoreMotion
 
 class Game: UIViewController {
     
+    @IBOutlet weak var timerLabel: UILabel!
+    var seconds = 40
+    var timer = Timer()
+    var timerIsOn = false
     
     @IBOutlet weak var word: UILabel!
     
@@ -57,15 +61,20 @@ class Game: UIViewController {
             if(self.word != nil){
                 if (ChooseLevel.getLevel.levelOne == true){
                    self.word.text = getLevelOneWord()
+                   self.word.center = self.view.center
                 }
                 else if (ChooseLevel.getLevel.levelTwo == true) {
-                    self.word.text =  getLevelOneWord()
+                    self.word.text =  getLevelTwoWord()
+                    self.word.center = self.view.center
                 }
                 else {
-                    self.word.text =  getLevelOneWord()
+                    self.word.text =  getLevelThree()
+                    self.word.center = self.view.center
                 }
             }
         }
+        // Add timer
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
     }
 
     func lottieAnimation(){
@@ -98,6 +107,21 @@ class Game: UIViewController {
             }
         }
     }
+    
+    // Update timer
+@objc func countdown() {
+        seconds -= 1
+        if(timerLabel != nil){
+            if(seconds >= 0){
+                timerLabel.text = "\(seconds)"
+            }
+            else{
+                return;
+            }
+        }
+        
+    }
+    
 }
 
 extension Double {
@@ -157,6 +181,5 @@ func getLevelThree() -> String {
       }
       return randomWord
   }
-
 
 

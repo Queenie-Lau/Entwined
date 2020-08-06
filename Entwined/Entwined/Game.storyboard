@@ -58,19 +58,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL3-9W-ALF">
-                                <rect key="frame" x="212" y="69" width="427" height="276"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL3-9W-ALF">
+                                <rect key="frame" x="448" y="207" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76n-w7-Y2i">
+                                <rect key="frame" x="438" y="284" width="50" height="66"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="76n-w7-Y2i" firstAttribute="top" secondItem="9bc-Bc-JNQ" secondAttribute="top" constant="284" id="ArU-8F-Fpw"/>
+                            <constraint firstItem="9bc-Bc-JNQ" firstAttribute="bottom" secondItem="76n-w7-Y2i" secondAttribute="bottom" constant="43" id="MzC-vd-kHz"/>
+                            <constraint firstItem="76n-w7-Y2i" firstAttribute="leading" secondItem="9bc-Bc-JNQ" secondAttribute="leading" constant="394" id="TCG-Ny-lIZ"/>
+                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerX" secondItem="dIu-QX-Jh9" secondAttribute="centerX" id="gP3-Lg-zjZ"/>
+                            <constraint firstItem="9bc-Bc-JNQ" firstAttribute="trailing" secondItem="76n-w7-Y2i" secondAttribute="trailing" constant="364" id="hbc-En-zJd"/>
+                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerY" secondItem="dIu-QX-Jh9" secondAttribute="centerY" id="ptr-Yq-0Mw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9bc-Bc-JNQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="hQh-CH-Bh4"/>
                     <connections>
+                        <outlet property="timerLabel" destination="76n-w7-Y2i" id="7Zp-hF-ezh"/>
                         <outlet property="word" destination="AL3-9W-ALF" id="vhV-ed-NoT"/>
                     </connections>
                 </viewController>
