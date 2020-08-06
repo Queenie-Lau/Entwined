@@ -58,8 +58,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="[game word]" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-tj-qgd">
-                                <rect key="frame" x="393" y="190" width="110" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-tj-qgd">
+                                <rect key="frame" x="335" y="190" width="254" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -69,13 +69,16 @@
                         <viewLayoutGuide key="safeArea" id="9bc-Bc-JNQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="hQh-CH-Bh4"/>
+                    <connections>
+                        <outlet property="xGyro" destination="6r0-tj-qgd" id="LQG-nb-jwL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l37-n7-5IS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271" y="110"/>
+            <point key="canvasLocation" x="270.53571428571428" y="108.69565217391305"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qQk-Jj-JL0"/>
+        <segue reference="ONF-xf-QNf"/>
     </inferredMetricsTieBreakers>
 </document>

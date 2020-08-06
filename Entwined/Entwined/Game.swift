@@ -8,17 +8,12 @@
 
 import UIKit
 import Lottie
+import CoreMotion
 
 class Game: UIViewController {
+    let motion = CMMotionManager()
     
-//    @IBAction func workPlease(_ sender: UIButton) {
-//        self.performSegue(withIdentifier: "FirstCard", sender: self)
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//            self.performSegue(withIdentifier: "FirstCard", sender: self)
-//        }
-      
-//        print("went inside here")
-//    }
+    @IBOutlet weak var xGyro: UITextField!
     static var animationPlayed = false
     @IBOutlet weak var animationView: AnimationView!
     var orientations = UIInterfaceOrientationMask.landscape
@@ -51,15 +46,9 @@ class Game: UIViewController {
         yourView.layer.cornerRadius = 40
         yourView.layer.borderColor = UIColor(red:233/255, green:247/255, blue:171/255, alpha: 1).cgColor
         view.insertSubview(yourView, at: 0)
+        myGyroscope()
     }
-//    override func viewDidAppear(_ animated: Bool) {
-//          func performSegue(withIdentifier: String, sender: Any?){
-//                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//                     performSegue(withIdentifier: "FirstCard", sender: self)
-//                 }
-//             }
-//    }
-    
+
     func lottieAnimation(){
         
          let countdown = Animation.named("countdown")
@@ -78,6 +67,51 @@ class Game: UIViewController {
          ])
         view.sendSubviewToBack(lottieView)
         Game.animationPlayed = true
+    }
+    
+    func myGyroscope() {
+        motion.gyroUpdateInterval = 0.5
+        motion.startDeviceMotionUpdates(to: OperationQueue.current!) { (data, error) in (data as Any)
+            if let trueData = data {
+                self.view.reloadInputViews()
+                 let b = trueData.attitude.roll
+                print(b.rounded(toPlaces: 3))
+            }
+        }
+    }
+}
+
+extension Double {
+    func rounded(toPlaces places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+}
+
+func radiansToDegrees(_ radians: Double) -> Double {
+    return radians * (180.0 / Double.pi)
+}
+class HeadsUp {
+    var gameOver = false
+    var seenWords:[String] = []
+    var correctWords:[String] = []
+    var inccorectWords:[String] = []
+    
+    
+    let levelOneWords = ["Recycle", "Water", "Pollution", "Planet", "Environment", "Energy", "Electricity", "Plant", "Flower", "Sustainable", "Sunlight", "Rain", "Ocean", "Heat", "Coral"]
+
+    let levelTwoWords = ["Renewable energy", "Solor energy", "Wind power", "Biomass", "Hydrogen", "Geothermal", "Marine animal", "Estuary", "Coral reef", "Hydroelectric", "Fossil fuel", "Power plant", "Agriculture", "Mining", "Climate change"]
+
+    let levelThreeWords = ["Envrionmental degradation", "Organic farming", "Phytoplankton", "Sustainable gardening", "Industrial revolution", "Great Pacific Garbage Patch", "Marine debris", "Cross contamination", "Atmospheric circulation", "Ocean circulation", "Greenhouse gases", "Photosynthesis", "Ecosystem", "Marine invertebrate", "Conservation practices"]
+
+    func getLevelOneWord() -> String {
+        var duplicateArray = levelOneWords
+        let randomWord = levelOneWords.randomElement()!
+        seenWords.append(randomWord)
+        if let index = duplicateArray.firstIndex(of: randomWord) {
+            duplicateArray.remove(at: index)
+        }
+        return randomWord
     }
     
 }
