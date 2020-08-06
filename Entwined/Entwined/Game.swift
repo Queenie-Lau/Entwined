@@ -11,6 +11,11 @@ import Lottie
 import CoreMotion
 
 class Game: UIViewController {
+    
+    
+    @IBOutlet weak var word: UILabel!
+    
+    // Start tracking the device's motion
     let motion = CMMotionManager()
     
     @IBOutlet weak var xGyro: UITextField!
@@ -47,6 +52,20 @@ class Game: UIViewController {
         yourView.layer.borderColor = UIColor(red:233/255, green:247/255, blue:171/255, alpha: 1).cgColor
         view.insertSubview(yourView, at: 0)
         myGyroscope()
+        
+        DispatchQueue.main.async {
+            if(self.word != nil){
+                if (ChooseLevel.getLevel.levelOne == true){
+                   self.word.text = getLevelOneWord()
+                }
+                else if (ChooseLevel.getLevel.levelTwo == true) {
+                    self.word.text =  getLevelOneWord()
+                }
+                else {
+                    self.word.text =  getLevelOneWord()
+                }
+            }
+        }
     }
 
     func lottieAnimation(){
@@ -91,7 +110,9 @@ extension Double {
 func radiansToDegrees(_ radians: Double) -> Double {
     return radians * (180.0 / Double.pi)
 }
-class HeadsUp {
+
+    // Game class
+
     var gameOver = false
     var seenWords:[String] = []
     var correctWords:[String] = []
@@ -111,7 +132,31 @@ class HeadsUp {
         if let index = duplicateArray.firstIndex(of: randomWord) {
             duplicateArray.remove(at: index)
         }
+        // Below are testing statements
+//        print(duplicateArray)
+//        print(levelOneWords)
         return randomWord
     }
-    
-}
+
+  func getLevelTwoWord() -> String {
+        var duplicateArray = levelTwoWords
+        let randomWord = levelTwoWords.randomElement()!
+        seenWords.append(randomWord)
+        if let index = duplicateArray.firstIndex(of: randomWord) {
+            duplicateArray.remove(at: index)
+        }
+        return randomWord
+    }
+
+func getLevelThree() -> String {
+      var duplicateArray = levelThreeWords
+      let randomWord = levelThreeWords.randomElement()!
+      seenWords.append(randomWord)
+      if let index = duplicateArray.firstIndex(of: randomWord) {
+          duplicateArray.remove(at: index)
+      }
+      return randomWord
+  }
+
+
+

@@ -171,13 +171,13 @@
         <!--Levels-->
         <scene sceneID="aBo-uC-8ve">
             <objects>
-                <viewController id="PlT-tw-qgH" userLabel="Levels" sceneMemberID="viewController">
+                <viewController id="PlT-tw-qgH" userLabel="Levels" customClass="ChooseLevel" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BSC-yN-a0S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="level-one.png" translatesAutoresizingMaskIntoConstraints="NO" id="NBZ-z0-zBv">
-                                <rect key="frame" x="57" y="254" width="301" height="160"/>
+                                <rect key="frame" x="70" y="254" width="301" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="level-two.png" translatesAutoresizingMaskIntoConstraints="NO" id="sL9-1N-CJ1">
@@ -189,28 +189,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckT-ay-PzN">
-                                <rect key="frame" x="122" y="309" width="138" height="51"/>
+                                <rect key="frame" x="135" y="309" width="138" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <state key="normal" title="Level One">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="buttonOne:" destination="PlT-tw-qgH" eventType="touchUpInside" id="iAB-Fj-dZp"/>
                                     <segue destination="OkB-tW-DNe" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Y8b-Nd-WX6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5E-b2-pI6">
-                                <rect key="frame" x="128" y="458" width="132" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                <state key="normal" title="Level Two">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="OkB-tW-DNe" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="iKf-Us-mFq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZK-7u-QWA">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZK-7u-QWA">
                                 <rect key="frame" x="128" y="600" width="153" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
@@ -218,6 +208,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="buttonThree:" destination="PlT-tw-qgH" eventType="touchUpInside" id="gVA-Hf-arQ"/>
                                     <segue destination="OkB-tW-DNe" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="FaB-aL-D95"/>
                                 </connections>
                             </button>
@@ -228,6 +219,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5E-b2-pI6">
+                                <rect key="frame" x="135" y="459" width="132" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="Level Two">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTwo:" destination="PlT-tw-qgH" eventType="touchUpInside" id="QCO-2Q-HLK"/>
+                                    <segue destination="OkB-tW-DNe" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="iKf-Us-mFq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83636277910000001" green="0.91112971310000002" blue="0.8038989902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
