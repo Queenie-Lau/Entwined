@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2n9-6J-4eN">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina5_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="2n9-6J-4eN" userLabel="Countdown" customClass="Game" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWH-q4-lzx">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8M9-iM-ufa" customClass="AnimationView" customModule="Lottie">
@@ -55,17 +55,17 @@
             <objects>
                 <viewController title="Transition" id="bkb-15-2Hx" customClass="Game" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dIu-QX-Jh9">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL3-9W-ALF">
-                                <rect key="frame" x="448" y="207" width="0.0" height="0.0"/>
+                                <rect key="frame" x="368" y="207" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76n-w7-Y2i">
-                                <rect key="frame" x="423" y="291" width="50" height="52"/>
+                                <rect key="frame" x="343" y="291" width="50" height="52"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,7 +85,7 @@
                     <connections>
                         <outlet property="timerLabel" destination="76n-w7-Y2i" id="7Zp-hF-ezh"/>
                         <outlet property="word" destination="AL3-9W-ALF" id="vhV-ed-NoT"/>
-                        <segue destination="dbT-KH-ghA" kind="show" identifier="Results" id="0MR-Pj-RNg"/>
+                        <segue destination="dbT-KH-ghA" kind="show" identifier="Results" id="ft3-yX-l4e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l37-n7-5IS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -99,13 +99,23 @@
             <point key="canvasLocation" x="270.53571428571428" y="108.69565217391305"/>
         </scene>
         <!--Results-->
+        <scene sceneID="i88-Yk-neL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Results" id="73j-69-nz3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4AR-my-9Gc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXc-0C-efK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815" y="-822"/>
+        </scene>
+        <!--Results-->
         <scene sceneID="jur-Dl-Ef6">
             <objects>
                 <viewController storyboardIdentifier="Results" title="Results" id="dbT-KH-ghA" userLabel="Results" customClass="Game" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fn9-Gy-LGT">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eXt-Ye-qc2"/>
                     </view>
                     <navigationItem key="navigationItem" id="P5j-hc-GgN"/>

@@ -100,17 +100,19 @@ class Game: UIViewController {
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(Game.handleSwipe))
         swipeDown.direction = .down
         self.view.addGestureRecognizer(swipeDown)
-        
+      
+        /** TODO
         // Check if timer is 0 or if we are out of words
         if(seconds == 0 || Game.levelOneDone || Game.levelTwoDone || Game.levelThreeDone){
             // Show the results screen
            timeToMoveOn()
         }
+        */
     }
     
     
     @objc func timeToMoveOn() {
-         
+    
             let storyBoard: UIStoryboard = UIStoryboard(name: "Game", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "Results") as! Game
             self.present(newViewController, animated: true, completion: nil)

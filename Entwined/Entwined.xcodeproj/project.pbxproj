@@ -39,6 +39,9 @@
 		4140500F24D2587D00D870CA /* leaves.json in Resources */ = {isa = PBXBuildFile; fileRef = 4140500E24D2587C00D870CA /* leaves.json */; };
 		4140501124D260A300D870CA /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4140501024D260A300D870CA /* Onboarding.storyboard */; settings = {ASSET_TAGS = (0, ); }; };
 		41785D4824DB91600071476A /* ChooseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41785D4724DB91600071476A /* ChooseLevel.swift */; };
+		41785D4A24DC86FB0071476A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41785D4924DC86FA0071476A /* ResultsViewController.swift */; };
+		41785D4C24DC87290071476A /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41785D4B24DC87290071476A /* Results.storyboard */; };
+		41785D4E24DC89170071476A /* side-decor.png in Resources */ = {isa = PBXBuildFile; fileRef = 41785D4D24DC89160071476A /* side-decor.png */; };
 		41BEB84324DB22E700738106 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BEB84224DB22E700738106 /* Chat.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +100,9 @@
 		4140500E24D2587C00D870CA /* leaves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leaves.json; sourceTree = "<group>"; };
 		4140501024D260A300D870CA /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		41785D4724DB91600071476A /* ChooseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLevel.swift; sourceTree = "<group>"; };
+		41785D4924DC86FA0071476A /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		41785D4B24DC87290071476A /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
+		41785D4D24DC89160071476A /* side-decor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "side-decor.png"; sourceTree = "<group>"; };
 		41BEB84224DB22E700738106 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +162,8 @@
 				41404FD924D24F2D00D870CA /* ViewController.swift */,
 				41404FDB24D24F2D00D870CA /* Main.storyboard */,
 				4114CC2C24DA4E85005C3D30 /* Game.storyboard */,
+				41785D4924DC86FA0071476A /* ResultsViewController.swift */,
+				41785D4B24DC87290071476A /* Results.storyboard */,
 				4140501024D260A300D870CA /* Onboarding.storyboard */,
 				41785D4724DB91600071476A /* ChooseLevel.swift */,
 				4114CC2E24DA5074005C3D30 /* Games.swift */,
@@ -173,6 +181,7 @@
 				4114CC2424DA08E4005C3D30 /* start-button.png */,
 				4114CC2824DA48AB005C3D30 /* correct-forehead.png */,
 				4114CC2A24DA48B8005C3D30 /* incorrect-forehead.png */,
+				41785D4D24DC89160071476A /* side-decor.png */,
 				41404FDE24D24F3800D870CA /* Assets.xcassets */,
 				41404FE324D24F3800D870CA /* Info.plist */,
 				4140500A24D2541B00D870CA /* entwined-green.json */,
@@ -321,11 +330,13 @@
 				4114CC1B24DA01E7005C3D30 /* forehead-3.png in Resources */,
 				4114CC2724DA4899005C3D30 /* guessing.png in Resources */,
 				41404FDF24D24F3800D870CA /* Assets.xcassets in Resources */,
+				41785D4E24DC89170071476A /* side-decor.png in Resources */,
 				41404FDD24D24F2D00D870CA /* Main.storyboard in Resources */,
 				4114CC2D24DA4E85005C3D30 /* Game.storyboard in Resources */,
 				4114CC1A24DA01E7005C3D30 /* forehead-2.png in Resources */,
 				4114CC2B24DA48B8005C3D30 /* incorrect-forehead.png in Resources */,
 				4114CC2924DA48AB005C3D30 /* correct-forehead.png in Resources */,
+				41785D4C24DC87290071476A /* Results.storyboard in Resources */,
 				4114CC1D24DA042B005C3D30 /* clock.png in Resources */,
 				41BEB84324DB22E700738106 /* Chat.storyboard in Resources */,
 				4114CC1524D9FDD6005C3D30 /* forehead-1.png in Resources */,
@@ -366,6 +377,7 @@
 				41404FDA24D24F2D00D870CA /* ViewController.swift in Sources */,
 				4114CC2F24DA5074005C3D30 /* Games.swift in Sources */,
 				41245DCE24D65B3300497C9C /* Questions.swift in Sources */,
+				41785D4A24DC86FB0071476A /* ResultsViewController.swift in Sources */,
 				41785D4824DB91600071476A /* ChooseLevel.swift in Sources */,
 				41404FD624D24F2D00D870CA /* AppDelegate.swift in Sources */,
 				41404FD824D24F2D00D870CA /* SceneDelegate.swift in Sources */,
