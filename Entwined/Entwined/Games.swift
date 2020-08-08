@@ -21,6 +21,8 @@ class Game: UIViewController {
     var timer = Timer()
     var timerIsOn = false
     var currLevel = -1
+    static var threeSecTimerPlayedOnce = false
+    static var fourtySecTimerPlayedOnce = false
     static var levelOneDone = false
     static var levelTwoDone = false
     static var levelThreeDone = false
@@ -69,6 +71,7 @@ class Game: UIViewController {
         DispatchQueue.main.async {
             if(self.word != nil){
                 if (ChooseLevel.getLevel.levelOne == true){
+                   print("I went inside")
                    self.word.text = getLevelOneWord()
                    self.word.center = self.view.center
                    var currLevel = 1
@@ -90,7 +93,11 @@ class Game: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
         
         // Add timer to see if it is time to show results
-        let fourtySeconds = Timer.scheduledTimer(timeInterval: 40.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: true)
+        let fourtySeconds = Timer.scheduledTimer(timeInterval: 40.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        
+        
+        // Transition to game screen after 3 seconds
+        let threeSeconds = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(playGame), userInfo: nil, repeats: false)
         
         // Get gesture
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(Game.handleSwipe))
@@ -112,11 +119,24 @@ class Game: UIViewController {
     
     
     @objc func timeToMoveOn() {
-    
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Game", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Results") as! Game
-            self.present(newViewController, animated: true, completion: nil)
+            print("Transition to results")
+            if(Game.fourtySecTimerPlayedOnce == false){
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Game", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "Results")
+                self.present(newViewController, animated: true, completion: nil)
+            }
+            Game.fourtySecTimerPlayedOnce = true
        }
+    
+    @objc func playGame() {
+             print("Game starts now!")
+            if(Game.threeSecTimerPlayedOnce == false){
+                 let storyBoard: UIStoryboard = UIStoryboard(name: "Game", bundle: nil)
+                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "Transition")
+                 self.present(newViewController, animated: true, completion: nil)
+            }
+             Game.threeSecTimerPlayedOnce = true
+        }
     
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
         print("swipe direction is", sender.direction)

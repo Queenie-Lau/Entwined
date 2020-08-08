@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2n9-6J-4eN">
-    <device id="retina5_5" orientation="landscape" appearance="light"/>
+    <device id="retina5_5" orientation="landscape" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,69 +16,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8M9-iM-ufa" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="279" y="125" width="358" height="182"/>
+                                <rect key="frame" x="186" y="0.0" width="366" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvB-3W-eMQ">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <gestureRecognizers/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="bkb-15-2Hx" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="qQk-Jj-JL0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="QAO-Gv-uux"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="dTZ-vo-EX4" appends="YES" id="Jfe-44-YzZ"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="animationView" destination="8M9-iM-ufa" id="qpD-Dw-cWW"/>
-                        <segue destination="bkb-15-2Hx" kind="modal" identifier="Transition" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="pEz-zh-kOO"/>
-                        <segue destination="bkb-15-2Hx" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ONF-xf-QNf"/>
+                        <segue destination="bkb-15-2Hx" kind="presentation" identifier="Transition" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="mht-0o-RgK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cB2-G5-1PT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="dTZ-vo-EX4"/>
             </objects>
-            <point key="canvasLocation" x="-500.22321428571428" y="108.69565217391305"/>
+            <point key="canvasLocation" x="-500.54347826086962" y="108.69565217391305"/>
         </scene>
         <!--Transition-->
         <scene sceneID="dRz-kW-aCX">
             <objects>
-                <viewController title="Transition" id="bkb-15-2Hx" customClass="Game" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Transition" title="Transition" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bkb-15-2Hx" customClass="Game" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dIu-QX-Jh9">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL3-9W-ALF">
-                                <rect key="frame" x="368" y="207" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76n-w7-Y2i">
+                                <rect key="frame" x="353" y="291" width="49.666666666666664" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76n-w7-Y2i">
-                                <rect key="frame" x="343" y="291" width="50" height="52"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL3-9W-ALF">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerX" secondItem="76n-w7-Y2i" secondAttribute="centerX" id="132-Gx-X7F"/>
-                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerX" secondItem="dIu-QX-Jh9" secondAttribute="centerX" id="Osk-Pi-Jap"/>
-                            <constraint firstItem="76n-w7-Y2i" firstAttribute="top" secondItem="9bc-Bc-JNQ" secondAttribute="top" constant="291" id="a1e-om-NCy"/>
-                            <constraint firstItem="AL3-9W-ALF" firstAttribute="centerY" secondItem="dIu-QX-Jh9" secondAttribute="centerY" id="bvm-7n-pyJ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9bc-Bc-JNQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="hQh-CH-Bh4"/>
@@ -96,7 +76,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="270.53571428571428" y="108.69565217391305"/>
+            <point key="canvasLocation" x="269.02173913043481" y="108.69565217391305"/>
         </scene>
         <!--Results-->
         <scene sceneID="i88-Yk-neL">
@@ -115,7 +95,7 @@
                     <view key="view" contentMode="scaleToFill" id="fn9-Gy-LGT">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="eXt-Ye-qc2"/>
                     </view>
                     <navigationItem key="navigationItem" id="P5j-hc-GgN"/>
@@ -125,7 +105,4 @@
             <point key="canvasLocation" x="1031" y="109"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ONF-xf-QNf"/>
-    </inferredMetricsTieBreakers>
 </document>
