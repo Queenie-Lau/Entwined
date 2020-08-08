@@ -21,6 +21,7 @@ class Game: UIViewController {
     var timer = Timer()
     var timerIsOn = false
     var currLevel = -1
+    static var finishedGame = false
     static var threeSecTimerPlayedOnce = false
     static var fourtySecTimerPlayedOnce = false
     static var levelOneDone = false
@@ -66,7 +67,7 @@ class Game: UIViewController {
         yourView.layer.cornerRadius = 40
         yourView.layer.borderColor = UIColor(red:233/255, green:247/255, blue:171/255, alpha: 1).cgColor
         view.insertSubview(yourView, at: 0)
-        myGyroscope()
+//        myGyroscope()
         
         DispatchQueue.main.async {
             if(self.word != nil){
@@ -89,16 +90,17 @@ class Game: UIViewController {
             }
             
         }
-        // Add timer
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
-        
-        // Add timer to see if it is time to show results
-        let fourtySeconds = Timer.scheduledTimer(timeInterval: 40.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
-        
-        
-        // Transition to game screen after 3 seconds
-        let threeSeconds = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(playGame), userInfo: nil, repeats: false)
-        
+        if(Game.finishedGame == false){
+            // Add timer
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
+            
+            // Add timer to see if it is time to show results
+            let fourtySeconds = Timer.scheduledTimer(timeInterval: 40.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+            
+            
+            // Transition to game screen after 3 seconds
+            let threeSeconds = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(playGame), userInfo: nil, repeats: false)
+        }
         // Get gesture
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(Game.handleSwipe))
         swipeUp.direction = .up
@@ -120,12 +122,11 @@ class Game: UIViewController {
     
     @objc func timeToMoveOn() {
             print("Transition to results")
-            if(Game.fourtySecTimerPlayedOnce == false){
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Game", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "Results")
-                self.present(newViewController, animated: true, completion: nil)
-            }
-            Game.fourtySecTimerPlayedOnce = true
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Game", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Results")
+            self.present(newViewController, animated: true, completion: nil)
+            Game.finishedGame = true
+        
        }
     
     @objc func playGame() {
@@ -136,6 +137,7 @@ class Game: UIViewController {
                  self.present(newViewController, animated: true, completion: nil)
             }
              Game.threeSecTimerPlayedOnce = true
+             myGyroscope()
         }
     
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
@@ -194,52 +196,62 @@ class Game: UIViewController {
     }
     
     func myGyroscope() {
+        var hasNotReturnedToNeutralState = true
         motion.gyroUpdateInterval = 0.5
         motion.startDeviceMotionUpdates(to: OperationQueue.current!) { (data, error) in (data as Any)
             if let trueData = data {
+                if(self.seconds > 0){
                 self.view.reloadInputViews()
                 let rollValue = trueData.attitude.roll
                 // check if word is correct or incorrect
                 
-                 if(abs(rollValue) < 1){
+                if(abs(rollValue) < 1 && self.seconds > 0){
                     if(self.word != nil){
-                        if(seenWords.contains(self.word.text!) == false){
+                            print(self.word.text!)
                             incorrectWords.append(self.word.text!)
                             if(ChooseLevel.getLevel.levelOne == true){
-                                 self.word.text = getLevelOneWord()
+                                 self.word.text! = getLevelOneWord()
                             }
                             else if(ChooseLevel.getLevel.levelOne == true){
-                                self.word.text = getLevelTwoWord()
+                                self.word.text! = getLevelTwoWord()
                             }
                             else{
-                                self.word.text = getLevelThreeWord()
+                                self.word.text! = getLevelThreeWord()
                             }
                         }
+                   
+                    }
+                 print(abs(rollValue.rounded(toPlaces: 3)))
+                
+                if(abs(rollValue) >= 1 && abs(rollValue) < 2){
+                    hasNotReturnedToNeutralState = false
                     }
                  }
-                    
-                 else if(abs(rollValue) > 1){
-                    if(self.word != nil){
-                        if(seenWords.contains(self.word.text!) == false){
-                            correctWords.append(self.word.text!)
-                        }
-                        if(ChooseLevel.getLevel.levelOne == true){
-                             self.word.text = getLevelOneWord()
-                        }
-                        else if(ChooseLevel.getLevel.levelOne == true){
-                            self.word.text = getLevelTwoWord()
-                        }
-                        else{
-                            self.word.text = getLevelThreeWord()
-                        }
-                    }
-                 }
+            }
+            return;
+      
+//
+//                 else if(abs(rollValue) > 1){
+//                    if(self.word != nil){
+//                        if(seenWords.contains(self.word.text!) == false){
+//                            correctWords.append(self.word.text!)
+//                        }
+//                        if(ChooseLevel.getLevel.levelOne == true){
+//                             self.word.text = getLevelOneWord()
+//                        }
+//                        else if(ChooseLevel.getLevel.levelOne == true){
+//                            self.word.text = getLevelTwoWord()
+//                        }
+//                        else{
+//                            self.word.text = getLevelThreeWord()
+//                        }
+//                    }
+//                 }
 //                print(correctWords)
 //                print(incorrectWords)
-                print(rollValue.rounded(toPlaces: 3))
+              
             }
         }
-    }
     
     // Update timer
 @objc func countdown() {
@@ -304,15 +316,15 @@ func radiansToDegrees(_ radians: Double) -> Double {
             duplicateArray.remove(at: index)
         }
         // Below are testing statements
-        print(duplicateArray)
-        print(levelOneWords)
+//        print(duplicateArray)
+//        print(levelOneWords)
         
         // Check if we went through all the words already
         if(seenWords.count == levelOneWords.count){
             Game.levelOneDone = true
         }
-        print(Game.levelOneDone)
-        print(duplicateArray)
+//        print(Game.levelOneDone)
+//        print(duplicateArray)
         return randomWord
     }
 
@@ -339,8 +351,8 @@ func radiansToDegrees(_ radians: Double) -> Double {
         if(seenWords.count == levelTwoWords.count){
               Game.levelTwoDone = true
           }
-        print(Game.levelTwoDone)
-        print(duplicateArray)
+//        print(Game.levelTwoDone)
+//        print(duplicateArray)
         return randomWord
     }
 
@@ -367,8 +379,8 @@ func getLevelThreeWord() -> String {
     if(seenWords.count == levelThreeWords.count){
               Game.levelThreeDone = true
           }
-      print(Game.levelTwoDone)
-      print(duplicateArray)
+//      print(Game.levelTwoDone)
+//      print(duplicateArray)
       return randomWord
   }
 
