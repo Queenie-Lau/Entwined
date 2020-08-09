@@ -17,6 +17,8 @@ class Game: UIViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
     
+    @IBOutlet weak var levelLabel: UILabel!
+    
     var seconds = 40
     var timer = Timer()
     var timerIsOn = false
@@ -28,6 +30,25 @@ class Game: UIViewController {
     static var levelTwoDone = false
     static var levelThreeDone = false
     
+    // Labels for each word (for the results page)
+    
+    @IBOutlet weak var word1: UILabel!
+    @IBOutlet weak var word2: UILabel!
+    @IBOutlet weak var word3: UILabel!
+    @IBOutlet weak var word4: UILabel!
+    @IBOutlet weak var word5: UILabel!
+    @IBOutlet weak var word6: UILabel!
+    @IBOutlet weak var word7: UILabel!
+    @IBOutlet weak var word8: UILabel!
+    @IBOutlet weak var word9: UILabel!
+    @IBOutlet weak var word10: UILabel!
+    @IBOutlet weak var word11: UILabel!
+    @IBOutlet weak var word12: UILabel!
+    @IBOutlet weak var word13: UILabel!
+    @IBOutlet weak var word14: UILabel!
+    @IBOutlet weak var word15: UILabel!
+    
+    // Charade word label
     @IBOutlet weak var word: UILabel!
     
     // Start tracking the device's motion
@@ -51,7 +72,17 @@ class Game: UIViewController {
             lottieAnimation()
         }
         
- 
+        // Check what level was chosen
+        if(ChooseLevel.getLevel.levelOne == true) {
+              currLevel = 1
+          }
+        else if(ChooseLevel.getLevel.levelTwo == true) {
+            currLevel = 2
+        }
+        else{
+            currLevel = 3
+        }
+        
 
         // Get main screen bounds
         let screenSize: CGRect = UIScreen.main.bounds
@@ -112,16 +143,41 @@ class Game: UIViewController {
         swipeDown.direction = .down
         self.view.addGestureRecognizer(swipeDown)
       
-        /** TODO
+    
         // Check if timer is 0 or if we are out of words
         if(seconds == 0 || Game.levelOneDone || Game.levelTwoDone || Game.levelThreeDone){
             // Show the results screen
            timeToMoveOn()
         }
-        */
+   
+        if(levelLabel != nil){
+              levelLabel.text = "Level \(currLevel)"
+        }
+        
+       // Display correct and incorrect words onto the display page
+        
+        let labelsArray = [word1, word2, word3, word4, word5, word6, word7, word8, word9, word10, word11, word12, word13, word14, word15]
+        var incorrectWordsIndex = 0
+        for (index, element) in labelsArray.enumerated() {
+            if(index < correctWords.count){
+                if(element != nil){
+                    element!.text = correctWords[index]
+                    element!.textColor = UIColor.green
+                }
+            }
+            else{
+                if(incorrectWordsIndex < incorrectWords.count){
+                    if(element != nil){
+                        element!.text = incorrectWords[incorrectWordsIndex]
+                        element!.textColor = UIColor.red
+                        incorrectWordsIndex = incorrectWordsIndex + 1
+                    }
+                }
+            }
+        }
     }
-    
-    
+
+ 
     @objc func timeToMoveOn() {
             print("Transition to results")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Game", bundle: nil)
@@ -129,10 +185,34 @@ class Game: UIViewController {
             self.present(newViewController, animated: true, completion: nil)
             Game.finishedGame = true
         
+//        let labelsArray = [word1, word2, word3, word4, word5, word6, word7, word8, word9, word10, word11, word12, word13, word14, word15]
+//        word1.text = "hi"
+//        word2.text = "testing"
+//        for (index, element) in labelsArray.enumerated() {
+//            if(index < correctWords.count){
+//                if(element != nil){
+//                    element!.text = correctWords[index]
+//                    element!.textColor = UIColor.green
+//                }
+//            }
+//            else{
+//                if(index < incorrectWords.count){
+//                    if(element != nil){
+//                        element!.text = incorrectWords[index]
+//                        element!.textColor = UIColor.red
+//                    }
+//                }
+//            }
+//            break
+//        }
+            print(incorrectWords)
+            print(correctWords)
+        
        }
     
+
     @objc func playGame() {
-             print("Game starts now!")
+            print("Game starts now!")
             if(Game.threeSecTimerPlayedOnce == false){
                  let storyBoard: UIStoryboard = UIStoryboard(name: "Game", bundle: nil)
                  let newViewController = storyBoard.instantiateViewController(withIdentifier: "Transition")
@@ -212,6 +292,7 @@ class Game: UIViewController {
                     if(self.word != nil){
                             print(self.word.text!)
                             incorrectWords.append(self.word.text!)
+                        
                             if(ChooseLevel.getLevel.levelOne == true){
                                  self.word.text! = getLevelOneWord()
                             }
@@ -232,9 +313,8 @@ class Game: UIViewController {
                 else if(abs(rollValue) > 2 && getAnotherWord == true){
                    if(self.word != nil){
                         print(self.word.text!)
-                       if(seenWords.contains(self.word.text!) == false){
-                           correctWords.append(self.word.text!)
-                       }
+                        correctWords.append(self.word.text!)
+                    
                        if(ChooseLevel.getLevel.levelOne == true){
                             self.word.text = getLevelOneWord()
                        }
@@ -248,11 +328,12 @@ class Game: UIViewController {
                    }
                 }
                     
-                    if(abs(rollValue) >= 1 && abs(rollValue) < 2){
-                                              getAnotherWord = true
-                                       }
+                if(abs(rollValue) >= 1 && abs(rollValue) < 2){
+                    getAnotherWord = true
+                }
                // Testing code to see all roll values
-              print(abs(rollValue.rounded(toPlaces: 3)))
+//              print(abs(rollValue.rounded(toPlaces: 3)))
+                    
                  }
         
             }
