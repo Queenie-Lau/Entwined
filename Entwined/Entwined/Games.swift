@@ -50,6 +50,8 @@ class Game: UIViewController {
         if(Game.animationPlayed == false){
             lottieAnimation()
         }
+        
+ 
 
         // Get main screen bounds
         let screenSize: CGRect = UIScreen.main.bounds
@@ -196,7 +198,8 @@ class Game: UIViewController {
     }
     
     func myGyroscope() {
-        var hasNotReturnedToNeutralState = true
+        var getNewWord = true
+        var getAnotherWord = true
         motion.gyroUpdateInterval = 0.5
         motion.startDeviceMotionUpdates(to: OperationQueue.current!) { (data, error) in (data as Any)
             if let trueData = data {
@@ -205,7 +208,7 @@ class Game: UIViewController {
                 let rollValue = trueData.attitude.roll
                 // check if word is correct or incorrect
                 
-                if(abs(rollValue) < 1 && self.seconds > 0){
+                if(abs(rollValue) < 1 && getNewWord == true){
                     if(self.word != nil){
                             print(self.word.text!)
                             incorrectWords.append(self.word.text!)
@@ -219,39 +222,43 @@ class Game: UIViewController {
                                 self.word.text! = getLevelThreeWord()
                             }
                         }
-                   
+                    getNewWord = false
                     }
-                 print(abs(rollValue.rounded(toPlaces: 3)))
-                
-                if(abs(rollValue) >= 1 && abs(rollValue) < 2){
-                    hasNotReturnedToNeutralState = false
+
+                    if(abs(rollValue) >= 1 && abs(rollValue) < 2){
+                        getNewWord = true
                     }
+               
+                else if(abs(rollValue) > 2 && getAnotherWord == true){
+                   if(self.word != nil){
+                        print(self.word.text!)
+                       if(seenWords.contains(self.word.text!) == false){
+                           correctWords.append(self.word.text!)
+                       }
+                       if(ChooseLevel.getLevel.levelOne == true){
+                            self.word.text = getLevelOneWord()
+                       }
+                       else if(ChooseLevel.getLevel.levelOne == true){
+                           self.word.text = getLevelTwoWord()
+                       }
+                       else{
+                           self.word.text = getLevelThreeWord()
+                       }
+                    getAnotherWord = false
+                   }
+                }
+                    
+                    if(abs(rollValue) >= 1 && abs(rollValue) < 2){
+                                              getAnotherWord = true
+                                       }
+               // Testing code to see all roll values
+              print(abs(rollValue.rounded(toPlaces: 3)))
                  }
+        
             }
             return;
-      
-//
-//                 else if(abs(rollValue) > 1){
-//                    if(self.word != nil){
-//                        if(seenWords.contains(self.word.text!) == false){
-//                            correctWords.append(self.word.text!)
-//                        }
-//                        if(ChooseLevel.getLevel.levelOne == true){
-//                             self.word.text = getLevelOneWord()
-//                        }
-//                        else if(ChooseLevel.getLevel.levelOne == true){
-//                            self.word.text = getLevelTwoWord()
-//                        }
-//                        else{
-//                            self.word.text = getLevelThreeWord()
-//                        }
-//                    }
-//                 }
-//                print(correctWords)
-//                print(incorrectWords)
-              
-            }
         }
+    }
     
     // Update timer
 @objc func countdown() {
@@ -291,7 +298,7 @@ func radiansToDegrees(_ radians: Double) -> Double {
     
     let levelOneWords = ["Recycle", "Water", "Pollution", "Planet", "Environment", "Energy", "Electricity", "Plant", "Flower", "Sustainable", "Sunlight", "Rain", "Ocean", "Heat", "Coral"]
 
-    let levelTwoWords = ["Renewable energy", "Solor energy", "Wind power", "Biomass", "Hydrogen", "Geothermal", "Marine animal", "Estuary", "Coral reef", "Hydroelectric", "Fossil fuel", "Power plant", "Agriculture", "Mining", "Climate change"]
+    let levelTwoWords = ["Renewable energy", "Solar energy", "Wind power", "Biomass", "Hydrogen", "Geothermal", "Marine animal", "Estuary", "Coral reef", "Hydroelectric", "Fossil fuel", "Power plant", "Agriculture", "Mining", "Climate change"]
 
     let levelThreeWords = ["Envrionmental degradation", "Organic farming", "Phytoplankton", "Sustainable gardening", "Industrial revolution", "Great Pacific Garbage Patch", "Marine debris", "Cross contamination", "Atmospheric circulation", "Ocean circulation", "Greenhouse gases", "Photosynthesis", "Ecosystem", "Marine invertebrate", "Conservation practices"]
 
