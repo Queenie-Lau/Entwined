@@ -210,30 +210,47 @@ class Game: UIViewController {
         if(sender.direction == .up){
             print("correct answer")
             if(seconds > 0){
-                if(currLevel == 1){
-                    self.word.text = getLevelOneWord()
-                    
-                }
-                else if(currLevel == 2){
-                    self.word.text = getLevelTwoWord()
-                }
-                else{
-                    self.word.text = getLevelThreeWord()
+                if(self.word != nil){
+                    if(currLevel == 1){
+                        let newWord = getLevelOneWord()
+                        self.word.text = newWord
+                        correctWords.append(newWord)
+                        
+                    }
+                    else if(currLevel == 2){
+                         let newWord = getLevelTwoWord()
+                         self.word.text = newWord
+                         correctWords.append(newWord)
+                    }
+                    else{
+                         let newWord = getLevelThreeWord()
+                         self.word.text = newWord
+                        correctWords.append(newWord)
+                    }
                 }
             }
         }
+            
         else if(sender.direction == .down){
             print("incorrect answer")
             if(seconds > 0){
-                if(currLevel == 1){
-                    self.word.text = getLevelOneWord()
-                    
-                }
-                else if(currLevel == 2){
-                    self.word.text = getLevelTwoWord()
-                }
-                else{
-                    self.word.text = getLevelThreeWord()
+                if(self.word != nil){
+                    if(currLevel == 1){
+                         let newWord = getLevelOneWord()
+                         self.word.text = newWord
+                         incorrectWords.append(newWord)
+                         
+                     }
+                     else if(currLevel == 2){
+                          let newWord = getLevelTwoWord()
+                          self.word.text = newWord
+                          incorrectWords.append(newWord)
+                     }
+                     else{
+                          let newWord = getLevelThreeWord()
+                          self.word.text = newWord
+                         incorrectWords.append(newWord)
+                    }
                 }
             }
         }
