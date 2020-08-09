@@ -108,17 +108,14 @@ class Game: UIViewController {
                    print("I went inside")
                    self.word.text = getLevelOneWord()
                    self.word.center = self.view.center
-                   var currLevel = 1
                 }
                 else if (ChooseLevel.getLevel.levelTwo == true) {
                     self.word.text =  getLevelTwoWord()
                     self.word.center = self.view.center
-                    var currLevel = 2
                 }
                 else {
                     self.word.text =  getLevelThreeWord()
                     self.word.center = self.view.center
-                    var currLevel = 3
                 }
             }
             
@@ -145,7 +142,7 @@ class Game: UIViewController {
       
     
         // Check if timer is 0 or if we are out of words
-        if(seconds == 0 || Game.levelOneDone || Game.levelTwoDone || Game.levelThreeDone){
+        if(seconds == 0 || Game.levelOneDone == true || Game.levelTwoDone == true || Game.levelThreeDone == true){
             // Show the results screen
            timeToMoveOn()
         }
@@ -185,26 +182,6 @@ class Game: UIViewController {
             self.present(newViewController, animated: true, completion: nil)
             Game.finishedGame = true
         
-//        let labelsArray = [word1, word2, word3, word4, word5, word6, word7, word8, word9, word10, word11, word12, word13, word14, word15]
-//        word1.text = "hi"
-//        word2.text = "testing"
-//        for (index, element) in labelsArray.enumerated() {
-//            if(index < correctWords.count){
-//                if(element != nil){
-//                    element!.text = correctWords[index]
-//                    element!.textColor = UIColor.green
-//                }
-//            }
-//            else{
-//                if(index < incorrectWords.count){
-//                    if(element != nil){
-//                        element!.text = incorrectWords[index]
-//                        element!.textColor = UIColor.red
-//                    }
-//                }
-//            }
-//            break
-//        }
             print(incorrectWords)
             print(correctWords)
         
@@ -220,6 +197,11 @@ class Game: UIViewController {
             }
              Game.threeSecTimerPlayedOnce = true
              myGyroscope()
+        // Check if timer is 0 or if we are out of words
+             if(seconds == 0 || Game.levelOneDone == true || Game.levelTwoDone == true || Game.levelThreeDone == true){
+                 // Show the results screen
+                timeToMoveOn()
+             }
         }
     
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
@@ -283,7 +265,7 @@ class Game: UIViewController {
         motion.gyroUpdateInterval = 0.5
         motion.startDeviceMotionUpdates(to: OperationQueue.current!) { (data, error) in (data as Any)
             if let trueData = data {
-                if(self.seconds > 0){
+                if(self.seconds > 0 && (Game.levelOneDone == false || Game.levelTwoDone == false || Game.levelThreeDone == false)){
                 self.view.reloadInputViews()
                 let rollValue = trueData.attitude.roll
                 // check if word is correct or incorrect
@@ -315,14 +297,16 @@ class Game: UIViewController {
                         print(self.word.text!)
                         correctWords.append(self.word.text!)
                     
-                       if(ChooseLevel.getLevel.levelOne == true){
+                    if(ChooseLevel.getLevel.levelOne == true && Game.levelOneDone == false){
                             self.word.text = getLevelOneWord()
                        }
-                       else if(ChooseLevel.getLevel.levelOne == true){
+                    else if(ChooseLevel.getLevel.levelOne == true && Game.levelTwoDone == false){
                            self.word.text = getLevelTwoWord()
                        }
                        else{
+                        if(Game.levelThreeDone == false){
                            self.word.text = getLevelThreeWord()
+                        }
                        }
                     getAnotherWord = false
                    }
@@ -409,7 +393,9 @@ func radiansToDegrees(_ radians: Double) -> Double {
         
         // Check if we went through all the words already
         if(seenWords.count == levelOneWords.count){
+            print("Check if game level one is done")
             Game.levelOneDone = true
+            
         }
 //        print(Game.levelOneDone)
 //        print(duplicateArray)
@@ -438,6 +424,7 @@ func radiansToDegrees(_ radians: Double) -> Double {
         }
         if(seenWords.count == levelTwoWords.count){
               Game.levelTwoDone = true
+             
           }
 //        print(Game.levelTwoDone)
 //        print(duplicateArray)
@@ -466,6 +453,7 @@ func getLevelThreeWord() -> String {
       }
     if(seenWords.count == levelThreeWords.count){
               Game.levelThreeDone = true
+             
           }
 //      print(Game.levelTwoDone)
 //      print(duplicateArray)
