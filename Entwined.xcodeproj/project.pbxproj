@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		41245DD424D65F4A00497C9C /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41245DD324D65F4A00497C9C /* Questions.swift */; };
 		41245DD624D65F5F00497C9C /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41245DD524D65F5F00497C9C /* Chat.storyboard */; };
-		41245DD824D66C7200497C9C /* tester-again.json in Resources */ = {isa = PBXBuildFile; fileRef = 41245DD724D66C7200497C9C /* tester-again.json */; };
 		4135AA4024D69BC800D2F8A2 /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4135AA3F24D69BC800D2F8A2 /* AR.storyboard */; };
 		41404FD624D24F2D00D870CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FD524D24F2D00D870CA /* AppDelegate.swift */; };
 		41404FD824D24F2D00D870CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41404FD724D24F2D00D870CA /* SceneDelegate.swift */; };
@@ -31,6 +30,8 @@
 		41B84E7B24D68B6000272D95 /* chat-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B84E7A24D68B5F00272D95 /* chat-bg.png */; };
 		41B84E7D24D6908A00272D95 /* bot-texting.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B84E7C24D6908900272D95 /* bot-texting.png */; };
 		41B84E7F24D6908F00272D95 /* person-texting.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B84E7E24D6908E00272D95 /* person-texting.png */; };
+		CDD2F5E524E84970003CB566 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2F5E424E84970003CB566 /* PhotoViewController.swift */; };
+		CDD2F5EA24E85600003CB566 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2F5E924E85600003CB566 /* PreviewViewController.swift */; };
 		E9E96E24FF0119F6ECEB3C78 /* libPods-Entwined.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9DD0F693FBFDE1BC75F7E5 /* libPods-Entwined.a */; };
 /* End PBXBuildFile section */
 
@@ -52,10 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		171E977A77BDC57CBCC812A9 /* Pods-Entwined-EntwinedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entwined-EntwinedUITests.debug.xcconfig"; path = "Target Support Files/Pods-Entwined-EntwinedUITests/Pods-Entwined-EntwinedUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		37425772BD776CAF3EE942A1 /* Pods-Entwined.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entwined.release.xcconfig"; path = "Target Support Files/Pods-Entwined/Pods-Entwined.release.xcconfig"; sourceTree = "<group>"; };
 		41245DD324D65F4A00497C9C /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		41245DD524D65F5F00497C9C /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
-		41245DD724D66C7200497C9C /* tester-again.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "tester-again.json"; path = "../../../Downloads/tester-again.json"; sourceTree = "<group>"; };
 		4135AA3F24D69BC800D2F8A2 /* AR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
 		41404FD224D24F2D00D870CA /* Entwined.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Entwined.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41404FD524D24F2D00D870CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,10 +82,10 @@
 		41B84E7A24D68B5F00272D95 /* chat-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat-bg.png"; sourceTree = "<group>"; };
 		41B84E7C24D6908900272D95 /* bot-texting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bot-texting.png"; sourceTree = "<group>"; };
 		41B84E7E24D6908E00272D95 /* person-texting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "person-texting.png"; sourceTree = "<group>"; };
-		70850B21A4B4A167EDB5EB84 /* Pods-Entwined.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entwined.debug.xcconfig"; path = "Target Support Files/Pods-Entwined/Pods-Entwined.debug.xcconfig"; sourceTree = "<group>"; };
+		6CB5028759A6D138BC2F3290 /* Pods-Entwined.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entwined.debug.xcconfig"; path = "Target Support Files/Pods-Entwined/Pods-Entwined.debug.xcconfig"; sourceTree = "<group>"; };
 		9B9DD0F693FBFDE1BC75F7E5 /* libPods-Entwined.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Entwined.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B71D82BDBAAD493BE56ECAA2 /* Pods-Entwined-EntwinedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entwined-EntwinedUITests.release.xcconfig"; path = "Target Support Files/Pods-Entwined-EntwinedUITests/Pods-Entwined-EntwinedUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E9397A10B304294377398F39 /* Pods-Entwined.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entwined.release.xcconfig"; path = "Target Support Files/Pods-Entwined/Pods-Entwined.release.xcconfig"; sourceTree = "<group>"; };
+		CDD2F5E424E84970003CB566 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		CDD2F5E924E85600003CB566 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		082C5F81C3AA5ADE213AAF15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CB5028759A6D138BC2F3290 /* Pods-Entwined.debug.xcconfig */,
+				37425772BD776CAF3EE942A1 /* Pods-Entwined.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		41404FC924D24F2C00D870CA = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +131,8 @@
 				41404FEB24D24F3900D870CA /* EntwinedTests */,
 				41404FF624D24F3900D870CA /* EntwinedUITests */,
 				41404FD324D24F2D00D870CA /* Products */,
-				45283AC556C3C7817064B3EA /* Pods */,
 				FA821997AF0BC5346984D007 /* Frameworks */,
+				082C5F81C3AA5ADE213AAF15 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,9 +154,10 @@
 				41404FD524D24F2D00D870CA /* AppDelegate.swift */,
 				41404FD724D24F2D00D870CA /* SceneDelegate.swift */,
 				41245DD324D65F4A00497C9C /* Questions.swift */,
+				CDD2F5E424E84970003CB566 /* PhotoViewController.swift */,
 				41404FD924D24F2D00D870CA /* ViewController.swift */,
 				41B84E7424D6795B00272D95 /* FadeViewController.swift */,
-				41245DD724D66C7200497C9C /* tester-again.json */,
+				CDD2F5E924E85600003CB566 /* PreviewViewController.swift */,
 				41404FDB24D24F2D00D870CA /* Main.storyboard */,
 				4140501024D260A300D870CA /* Onboarding.storyboard */,
 				41404FDE24D24F3800D870CA /* Assets.xcassets */,
@@ -182,17 +192,6 @@
 				41404FF924D24F3900D870CA /* Info.plist */,
 			);
 			path = EntwinedUITests;
-			sourceTree = "<group>";
-		};
-		45283AC556C3C7817064B3EA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				70850B21A4B4A167EDB5EB84 /* Pods-Entwined.debug.xcconfig */,
-				E9397A10B304294377398F39 /* Pods-Entwined.release.xcconfig */,
-				171E977A77BDC57CBCC812A9 /* Pods-Entwined-EntwinedUITests.debug.xcconfig */,
-				B71D82BDBAAD493BE56ECAA2 /* Pods-Entwined-EntwinedUITests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		FA821997AF0BC5346984D007 /* Frameworks */ = {
@@ -317,7 +316,6 @@
 				41404FDF24D24F3800D870CA /* Assets.xcassets in Resources */,
 				41B84E7F24D6908F00272D95 /* person-texting.png in Resources */,
 				41B84E7D24D6908A00272D95 /* bot-texting.png in Resources */,
-				41245DD824D66C7200497C9C /* tester-again.json in Resources */,
 				41245DD624D65F5F00497C9C /* Chat.storyboard in Resources */,
 				4140502E24D64AA800D870CA /* logo.json in Resources */,
 				41B84E7B24D68B6000272D95 /* chat-bg.png in Resources */,
@@ -381,9 +379,11 @@
 			files = (
 				41404FDA24D24F2D00D870CA /* ViewController.swift in Sources */,
 				41404FD624D24F2D00D870CA /* AppDelegate.swift in Sources */,
+				CDD2F5EA24E85600003CB566 /* PreviewViewController.swift in Sources */,
 				41245DD424D65F4A00497C9C /* Questions.swift in Sources */,
 				41404FD824D24F2D00D870CA /* SceneDelegate.swift in Sources */,
 				41B84E7524D6795B00272D95 /* FadeViewController.swift in Sources */,
+				CDD2F5E524E84970003CB566 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,11 +546,13 @@
 		};
 		41404FFD24D24F3900D870CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70850B21A4B4A167EDB5EB84 /* Pods-Entwined.debug.xcconfig */;
+			baseConfigurationReference = 6CB5028759A6D138BC2F3290 /* Pods-Entwined.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82K4C8S8BN;
 				INFOPLIST_FILE = Entwined/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -564,11 +566,13 @@
 		};
 		41404FFE24D24F3900D870CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9397A10B304294377398F39 /* Pods-Entwined.release.xcconfig */;
+			baseConfigurationReference = 37425772BD776CAF3EE942A1 /* Pods-Entwined.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82K4C8S8BN;
 				INFOPLIST_FILE = Entwined/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

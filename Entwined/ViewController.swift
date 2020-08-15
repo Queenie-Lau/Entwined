@@ -8,7 +8,6 @@
 import ARKit
 import UIKit
 import Lottie
-import Hero
 var animationPlayedAlready = false
 
 class ViewController: UIViewController {
