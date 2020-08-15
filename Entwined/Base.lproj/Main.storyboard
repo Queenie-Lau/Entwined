@@ -148,38 +148,16 @@
                                     <constraint firstAttribute="bottom" secondItem="Xjj-NJ-dis" secondAttribute="bottom" constant="22" id="nd3-V9-Vb3"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Q7-0j-l5t">
-                                <rect key="frame" x="24" y="601" width="44" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="8hW-jH-bxB"/>
-                                    <constraint firstAttribute="height" constant="30" id="c9k-8e-0IU"/>
-                                </constraints>
-                                <state key="normal" title="Select"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sticker1.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Qb-dg-wnW" customClass="UIImageVIew">
-                                <rect key="frame" x="16" y="548" width="61" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="GQm-QH-rHx"/>
-                                    <constraint firstAttribute="width" constant="61" id="vj5-h9-KkF"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hNv-Vd-SFG" firstAttribute="trailing" secondItem="p3C-Fk-CP0" secondAttribute="trailing" id="6Nr-B3-kga"/>
-                            <constraint firstItem="p3C-Fk-CP0" firstAttribute="bottom" secondItem="8Q7-0j-l5t" secondAttribute="bottom" constant="16" id="9pw-cK-kF4"/>
-                            <constraint firstItem="4Qb-dg-wnW" firstAttribute="leading" secondItem="p3C-Fk-CP0" secondAttribute="leading" constant="16" id="BQA-M0-Mgj"/>
                             <constraint firstAttribute="bottomMargin" secondItem="hNv-Vd-SFG" secondAttribute="bottom" constant="-34" id="C3f-L1-eh5"/>
                             <constraint firstItem="eGJ-iF-8Sq" firstAttribute="trailing" secondItem="p3C-Fk-CP0" secondAttribute="trailing" id="G1P-Y5-t1e"/>
                             <constraint firstItem="hNv-Vd-SFG" firstAttribute="leading" secondItem="p3C-Fk-CP0" secondAttribute="leading" id="Jhy-gj-nJ9"/>
-                            <constraint firstItem="8Q7-0j-l5t" firstAttribute="top" secondItem="4Qb-dg-wnW" secondAttribute="bottom" constant="-3" id="RaH-sd-Lb8"/>
-                            <constraint firstItem="8Q7-0j-l5t" firstAttribute="leading" secondItem="p3C-Fk-CP0" secondAttribute="leading" constant="24" id="ZrH-Bs-Xg6"/>
-                            <constraint firstItem="8Q7-0j-l5t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="p3C-Fk-CP0" secondAttribute="leading" id="qVJ-nW-iCA"/>
                             <constraint firstItem="hNv-Vd-SFG" firstAttribute="top" secondItem="ccl-ty-eXd" secondAttribute="topMargin" id="qp2-IP-rWS"/>
-                            <constraint firstItem="4Qb-dg-wnW" firstAttribute="leading" secondItem="p3C-Fk-CP0" secondAttribute="leading" constant="16" id="r09-hi-hNU"/>
                             <constraint firstItem="eGJ-iF-8Sq" firstAttribute="top" secondItem="p3C-Fk-CP0" secondAttribute="top" constant="-19" id="vRk-Ro-eex"/>
                             <constraint firstItem="eGJ-iF-8Sq" firstAttribute="leading" secondItem="p3C-Fk-CP0" secondAttribute="leading" id="vSo-Tg-Pi1"/>
-                            <constraint firstItem="p3C-Fk-CP0" firstAttribute="trailing" secondItem="8Q7-0j-l5t" secondAttribute="trailing" constant="307" id="yXN-Pt-ic2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p3C-Fk-CP0"/>
                     </view>
@@ -190,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UDP-jl-sVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1908" y="134"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="H2l-p3-SyJ">
@@ -215,10 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vme-7h-Dpb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2904.8000000000002" y="-412.44377811094455"/>
+            <point key="canvasLocation" x="2754" y="-396"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Sticker1.png" width="422" height="560"/>
-    </resources>
 </document>
