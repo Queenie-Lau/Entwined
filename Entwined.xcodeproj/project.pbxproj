@@ -32,6 +32,11 @@
 		41B84E7F24D6908F00272D95 /* person-texting.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B84E7E24D6908E00272D95 /* person-texting.png */; };
 		CDD2F5E524E84970003CB566 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2F5E424E84970003CB566 /* PhotoViewController.swift */; };
 		CDD2F5EA24E85600003CB566 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2F5E924E85600003CB566 /* PreviewViewController.swift */; };
+		CDD2F5FB24E8960A003CB566 /* Sticker4.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD2F5F724E8960A003CB566 /* Sticker4.png */; };
+		CDD2F5FC24E8960A003CB566 /* Sticker2.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD2F5F824E8960A003CB566 /* Sticker2.png */; };
+		CDD2F5FD24E8960A003CB566 /* Sticker1.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD2F5F924E8960A003CB566 /* Sticker1.png */; };
+		CDD2F5FE24E8960A003CB566 /* Sticker3.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD2F5FA24E8960A003CB566 /* Sticker3.png */; };
+		CDD2F60024E8966B003CB566 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2F5FF24E8966B003CB566 /* EditViewController.swift */; };
 		E9E96E24FF0119F6ECEB3C78 /* libPods-Entwined.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9DD0F693FBFDE1BC75F7E5 /* libPods-Entwined.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +91,11 @@
 		9B9DD0F693FBFDE1BC75F7E5 /* libPods-Entwined.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Entwined.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD2F5E424E84970003CB566 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		CDD2F5E924E85600003CB566 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		CDD2F5F724E8960A003CB566 /* Sticker4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sticker4.png; sourceTree = "<group>"; };
+		CDD2F5F824E8960A003CB566 /* Sticker2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sticker2.png; sourceTree = "<group>"; };
+		CDD2F5F924E8960A003CB566 /* Sticker1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sticker1.png; sourceTree = "<group>"; };
+		CDD2F5FA24E8960A003CB566 /* Sticker3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sticker3.png; sourceTree = "<group>"; };
+		CDD2F5FF24E8966B003CB566 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +168,7 @@
 				41404FD924D24F2D00D870CA /* ViewController.swift */,
 				41B84E7424D6795B00272D95 /* FadeViewController.swift */,
 				CDD2F5E924E85600003CB566 /* PreviewViewController.swift */,
+				CDD2F5FF24E8966B003CB566 /* EditViewController.swift */,
 				41404FDB24D24F2D00D870CA /* Main.storyboard */,
 				4140501024D260A300D870CA /* Onboarding.storyboard */,
 				41404FDE24D24F3800D870CA /* Assets.xcassets */,
@@ -172,6 +183,10 @@
 				4140501F24D6261000D870CA /* entwined-official.json */,
 				4140502324D63D8F00D870CA /* entwined-final.json */,
 				41B84E7C24D6908900272D95 /* bot-texting.png */,
+				CDD2F5F924E8960A003CB566 /* Sticker1.png */,
+				CDD2F5F824E8960A003CB566 /* Sticker2.png */,
+				CDD2F5FA24E8960A003CB566 /* Sticker3.png */,
+				CDD2F5F724E8960A003CB566 /* Sticker4.png */,
 			);
 			path = Entwined;
 			sourceTree = "<group>";
@@ -313,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD2F5FE24E8960A003CB566 /* Sticker3.png in Resources */,
 				41404FDF24D24F3800D870CA /* Assets.xcassets in Resources */,
 				41B84E7F24D6908F00272D95 /* person-texting.png in Resources */,
 				41B84E7D24D6908A00272D95 /* bot-texting.png in Resources */,
@@ -321,13 +337,16 @@
 				41B84E7B24D68B6000272D95 /* chat-bg.png in Resources */,
 				4135AA4024D69BC800D2F8A2 /* AR.storyboard in Resources */,
 				4140502624D63F2500D870CA /* work-please.json in Resources */,
+				CDD2F5FB24E8960A003CB566 /* Sticker4.png in Resources */,
 				41B84E7924D689E800272D95 /* Earth Bot.png in Resources */,
 				4140502824D641D300D870CA /* second-try.json in Resources */,
 				41404FDD24D24F2D00D870CA /* Main.storyboard in Resources */,
 				4140502424D63D9000D870CA /* entwined-final.json in Resources */,
 				41B84E7724D687B000272D95 /* grass.png in Resources */,
 				4140502024D6261100D870CA /* entwined-official.json in Resources */,
+				CDD2F5FD24E8960A003CB566 /* Sticker1.png in Resources */,
 				4140501124D260A300D870CA /* Onboarding.storyboard in Resources */,
+				CDD2F5FC24E8960A003CB566 /* Sticker2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD2F60024E8966B003CB566 /* EditViewController.swift in Sources */,
 				41404FDA24D24F2D00D870CA /* ViewController.swift in Sources */,
 				41404FD624D24F2D00D870CA /* AppDelegate.swift in Sources */,
 				CDD2F5EA24E85600003CB566 /* PreviewViewController.swift in Sources */,
