@@ -50,14 +50,14 @@ class PhotoViewController: UIViewController {
                 frontCamera = device
             }
         }
-        currentCamera = backCamera
-        if currentCamera != backCamera {
-            currentCamera = frontCamera
+        currentCamera = frontCamera
+        if currentCamera != frontCamera {
+            currentCamera = backCamera
         }
     }
     
     func setupInputOutput() {
-        currentCamera = backCamera
+        currentCamera = frontCamera
         do {
             
             //photoOutput != nil
@@ -90,6 +90,7 @@ class PhotoViewController: UIViewController {
     func startRunningCaptureSession() {
         captureSession.startRunning()
     }
+
     
     
     @IBAction func cameraButton_TouchUpInside(_ sender: Any) {
