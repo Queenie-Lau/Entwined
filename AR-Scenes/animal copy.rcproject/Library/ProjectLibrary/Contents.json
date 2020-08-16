@@ -1,0 +1,37 @@
+[
+  {
+    "libraryIdentifier" : "efab00f40a01553498d18becf4533708",
+    "format" : "model",
+    "displayName" : "2393_Earth_1_12756.usdz"
+  },
+  {
+    "libraryIdentifier" : "4a4c4c7ea0011d12e1543964698fd411",
+    "format" : "model",
+    "displayName" : "Seal.usdz"
+  },
+  {
+    "libraryIdentifier" : "55a463c2be9b08eacdb5d959081bd777",
+    "format" : "model",
+    "displayName" : "turtle.usdz"
+  },
+  {
+    "libraryIdentifier" : "3352b182cbe57b938bc07ddd5ae4773b",
+    "format" : "model",
+    "displayName" : "penguin.usdz"
+  },
+  {
+    "libraryIdentifier" : "320c3197622fdc5c1b72d75115c1b36a",
+    "format" : "model",
+    "displayName" : "PenguinC.usdz"
+  },
+  {
+    "libraryIdentifier" : "e903722b3d9984ecf4570677d09deff0",
+    "format" : "model",
+    "displayName" : "SealC.usdz"
+  },
+  {
+    "libraryIdentifier" : "b8ec1b195281d29f9d5988f7bb92ffeb",
+    "format" : "model",
+    "displayName" : "turtleC.usdz"
+  }
+]
