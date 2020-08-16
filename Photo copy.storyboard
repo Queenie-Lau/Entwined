@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vxn-SM-q2g">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo View Controller-->
+        <scene sceneID="9vT-KY-LWn">
+            <objects>
+                <viewController id="Vxn-SM-q2g" customClass="PhotoViewController" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GgX-sG-iWc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jps-Az-abL">
+                                <rect key="frame" x="157" y="554" width="61" height="61"/>
+                                <state key="normal" backgroundImage="button.png">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraButton_TouchUpInside:" destination="Vxn-SM-q2g" eventType="touchUpInside" id="KQs-zB-XyW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jps-Az-abL" firstAttribute="top" secondItem="aVG-98-xbI" secondAttribute="top" constant="554" id="0BC-JS-Pm8"/>
+                            <constraint firstItem="jps-Az-abL" firstAttribute="leading" secondItem="aVG-98-xbI" secondAttribute="leading" constant="157" id="X5X-Fb-wxO"/>
+                            <constraint firstItem="aVG-98-xbI" firstAttribute="trailing" secondItem="jps-Az-abL" secondAttribute="trailing" constant="157" id="kDA-NS-roA"/>
+                            <constraint firstItem="aVG-98-xbI" firstAttribute="bottom" secondItem="jps-Az-abL" secondAttribute="bottom" constant="52" id="pfa-Ip-vf1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aVG-98-xbI"/>
+                    </view>
+                    <connections>
+                        <segue destination="CcO-zI-M51" kind="presentation" identifier="showPhoto_Segue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ede-Zg-X4J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXy-sK-U7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234.4000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="Yve-Si-iB1">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" id="CcO-zI-M51" customClass="PreviewViewController" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ccl-ty-eXd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hNv-Vd-SFG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="701"/>
+                            </imageView>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGJ-iF-8Sq">
+                                <rect key="frame" x="0.0" y="-19" width="375" height="73"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjj-NJ-dis">
+                                        <rect key="frame" x="23" y="29" width="54" height="36"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButton_TouchUpInside:" destination="CcO-zI-M51" eventType="touchUpInside" id="Kbd-W3-G6K"/>
+                                            <segue destination="ntY-iZ-UUE" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="hzD-wD-gyf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYZ-st-pXP">
+                                        <rect key="frame" x="294" y="32" width="38" height="30"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButton_TouchUpInside:" destination="CcO-zI-M51" eventType="touchUpInside" id="MeO-22-zxh"/>
+                                            <segue destination="ntY-iZ-UUE" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="MFo-1P-WHo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="CYZ-st-pXP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xjj-NJ-dis" secondAttribute="trailing" constant="8" symbolic="YES" id="7uz-d1-2Hb"/>
+                                    <constraint firstAttribute="bottom" secondItem="CYZ-st-pXP" secondAttribute="bottom" constant="11" id="AYe-Pg-jKb"/>
+                                    <constraint firstItem="CYZ-st-pXP" firstAttribute="top" secondItem="eGJ-iF-8Sq" secondAttribute="top" constant="32" id="Gir-TT-GDz"/>
+                                    <constraint firstItem="Xjj-NJ-dis" firstAttribute="top" secondItem="eGJ-iF-8Sq" secondAttribute="top" constant="29" id="NM6-OR-hSM"/>
+                                    <constraint firstAttribute="height" constant="73" id="QXq-4R-01b"/>
+                                    <constraint firstAttribute="trailing" secondItem="CYZ-st-pXP" secondAttribute="trailing" constant="43" id="kJ1-8Y-nsi"/>
+                                    <constraint firstItem="Xjj-NJ-dis" firstAttribute="leading" secondItem="eGJ-iF-8Sq" secondAttribute="leading" constant="23" id="mcv-tj-OaP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xjj-NJ-dis" secondAttribute="bottom" constant="8" id="nd3-V9-Vb3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hNv-Vd-SFG" firstAttribute="trailing" secondItem="p3C-Fk-CP0" secondAttribute="trailing" id="6Nr-B3-kga"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="hNv-Vd-SFG" secondAttribute="bottom" constant="-34" id="C3f-L1-eh5"/>
+                            <constraint firstItem="eGJ-iF-8Sq" firstAttribute="trailing" secondItem="p3C-Fk-CP0" secondAttribute="trailing" id="G1P-Y5-t1e"/>
+                            <constraint firstItem="hNv-Vd-SFG" firstAttribute="leading" secondItem="p3C-Fk-CP0" secondAttribute="leading" id="Jhy-gj-nJ9"/>
+                            <constraint firstItem="hNv-Vd-SFG" firstAttribute="top" secondItem="ccl-ty-eXd" secondAttribute="topMargin" id="qp2-IP-rWS"/>
+                            <constraint firstItem="eGJ-iF-8Sq" firstAttribute="top" secondItem="p3C-Fk-CP0" secondAttribute="top" constant="-19" id="vRk-Ro-eex"/>
+                            <constraint firstItem="eGJ-iF-8Sq" firstAttribute="leading" secondItem="p3C-Fk-CP0" secondAttribute="leading" id="vSo-Tg-Pi1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p3C-Fk-CP0"/>
+                    </view>
+                    <connections>
+                        <outlet property="photo" destination="hNv-Vd-SFG" id="CfR-k2-3h5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UDP-jl-sVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1908" y="133.5832083958021"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Whh-AO-4Te">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="ntY-iZ-UUE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a31-sC-6wo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673" y="95"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hzD-wD-gyf"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="button.png" width="283" height="283"/>
+    </resources>
+</document>

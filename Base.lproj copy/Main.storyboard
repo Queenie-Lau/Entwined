@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Entwined" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5U-ND-YVj" customClass="AnimationView">
+                                <rect key="frame" x="7" y="248" width="400" height="400"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="8kB-GM-9iy"/>
+                                    <constraint firstAttribute="height" constant="400" id="bwR-Wh-KgL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50373774770000002" green="0.61751669649999996" blue="0.45486271379999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="z5U-ND-YVj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6gS-mp-Ks8"/>
+                            <constraint firstItem="z5U-ND-YVj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DH5-OG-w9i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XuU-lz-VdQ" appends="YES" id="cUF-uH-F5u"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="z5U-ND-YVj" id="LAl-kw-wK2"/>
+                        <segue destination="1eJ-BT-ImY" kind="show" identifier="Welcome" id="RPz-BG-aHe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XuU-lz-VdQ">
+                    <connections>
+                        <segue destination="1eJ-BT-ImY" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3FB-jP-bX8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="nVA-gV-SXk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Welcome" id="1eJ-BT-ImY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Tlc-Zr-gCy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ksG-R7-TCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="114"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RPz-BG-aHe"/>
+    </inferredMetricsTieBreakers>
+</document>
