@@ -23,12 +23,10 @@ class PreviewViewController: UIViewController {
 
     
     @IBAction func cancelButton_TouchUpInside(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveButton_TouchUpInside(_ sender: Any) {
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        dismiss(animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
