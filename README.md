@@ -1,4 +1,6 @@
 # Entwined
+![Entwined Overview](https://github.com/Queenie-Lau/Entwined/blob/master/Entwined-Overview.png)
+
 ## PROBLEM IDENTIFICATION
 ###### Severe climate events and human activities contribute to climate change. We have increased greenhouse gas concentrations in the atmosphere by polluting the air with chemicals. Animals are harmed because they struggle to adapt to these new conditions. Droughts and floods destroy their homes and they are also being forced to change their behaviors such as feeding habits, nesting, breeding, and migrating.
 ###### Plastic pollution is another serious issue. Studies report that there is an estimate of 5.25 trillion pieces of plastic waste in our oceans. A major pollutant is microplastic. It blocks the digestive tract and it is known to be harmful to aquatic life. 
