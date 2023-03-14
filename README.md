@@ -9,7 +9,7 @@
 ###### Our target audience are young children, animal-lovers, environmentalists, and spontaneous individuals looking to learn more about climate change in a fun manner. Some pain points we have identified were feelings of uncertainty and disinterest.  
 
 ## SOLUTION IDEATION
-###### We can meet our users needs by making learning more interactive and engaging with augmented reality, games, and befriending an animal. The chat bot 
+###### We can meet our users needs by making learning more interactive and engaging with augmented reality, games, and befriending an animal.
 
 ## WALKTHROUGH OF ENTWINED
 ###### Once you open the app it will direct you to the welcome screen and give you a quick overview of what the app is about.
